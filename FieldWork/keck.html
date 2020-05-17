@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../style.css" /> 
+
+<title>Final project subpage</title>
+<style>
+/*ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}*/
+</style>   <!--nav bar--> 
+<style>
+      #map {
+        height: 400px;
+      }
+    /*body{
+        margin: 20px;
+        font-family: "Avant Garde", sans-serif;
+    }*/
+</style>   <!--map--> 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+</head>
+<body>
+<h1>Geologic Fieldwork</h1>
+<ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Iowa State</a>
+        <div class="dropdown-content">
+          <a href="switzerland.html">Switzerland fieldwork</a>
+          <a href="castleguard.html">Banff fieldwork</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Carleton College</a>
+        <div class="dropdown-content">
+          <a href="keck.html">Keck, Iceland thesis</a>
+          <a href="ca.html">Painted Hills mapping project</a>
+          <a href="nz.html">New Zealand mapping projects</a>
+        </div>
+    </ul>      <!--nav bar--> 
+<h2>Keck Geology Consortium, Iceland, 2016-2017</h2>
+<p>During my senior year at Carleton College, I had the great opportunity to participate in a Keck Geology Consortium project, which is designed to provide research experiences to undergraduate students from the 18 participating colleges and universities. I joined a project lead by Megan Pollock and Ben Edwards that involved two weeks of fieldwork in Iceland, two weeks of labwork at Wooster College, presenting posters at the GSA national fall meeting, completing a thesis in the following year, and finally presenting our final work at the Keck Symposium at Wesleyan University.</p>
+<p>I studied vesicle distribution in subglacial pillow basalt. My research for Keck was incorporated my research into my senior thesis at Carleton College. My summer fieldwork in Iceland was followed by petrology and geochemistry lab work at the College of Wooster. I used Adobe Illustrator and ImageJ extensively for data processing and preparing figures. </p>
+<div id="map" style="width:80%"></div>
+    <br>
+<embed src="keckdoc.pdf" width="80%" height="600px" />
+    <br>
+    <a href="keckdoc.pdf">Open pdf</a>
+    <br>
+    <br>
+<img src="photos/iceland.jpg" style="width:49%">                      
+<img src="photos/pillows.jpg" style="width:49%;"><br>
+<img src="photos/moss.jpg" style="width:49%;">
+<img src="photos/tents.jpg" style="width:49%;"><br>
+<img src="photos/columns.jpg" style="width:49%;">
+<img src="photos/tuya.jpg" style="width:49%;">
+<script>
+      //Base Layers
+      var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+      //the map
+      var map = L.map('map', {
+        center: new L.LatLng(64.55998287916448,-21.658000946044922),
+        zoom: 7,
+        layers: [Esri_WorldImagery]
+      });
+      
+      
+L.marker([64.5516397783742,-21.66628360748291],{
+	title: "Undirhlíðar Quarry",
+	opacity: 1
+}).addTo(map)
+  .bindTooltip("Undirhlíðar Quarry");
+    </script>      <!--map--> 
+</body>
+</html>
+
+
