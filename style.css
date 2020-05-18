@@ -7,7 +7,7 @@ body {
         }
 
 .whitebox{
-      background: rgba(252, 252, 252, 0.5);
+      background: rgba(252, 252, 252, 0.6);
       margin-bottom: 50px; 
       border-radius: 5px;
       padding: 30px;
@@ -23,11 +23,23 @@ body {
 }
 
 p{
-        opacity:1; 
-        margin:0px;
-        margin-left: 20px;
-
+    opacity:1; 
+    margin:0px;
+    margin-left: 20px;
         }
+ul{
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.title{
+    margin-top: 10px; 
+    list-style-type: none
+        }
+.bullet{
+    margin:0px;
+    margin-left: 25px;
+}
 h3{
     margin-left: 20px;
 }
@@ -49,7 +61,7 @@ footer {
 
 /*nav bar*/
 
-ul {
+ul.nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -57,7 +69,7 @@ ul {
   background-color: #333;
 }
 
-li {
+li.nav {
   float: left;
 }
 
