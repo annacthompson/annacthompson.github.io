@@ -2,6 +2,7 @@
 <html>
     <head>
     <link rel="stylesheet" href="../style.css" /> 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
 
     <title>Anna C. Thompson</title>
     <style>
@@ -10,53 +11,17 @@
         }
     </style>        
     </head>
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("/nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+    </nav>
     <body>
-    <h1><a href="../index.html" style="color:black; text-decoration:none">Anna C. Thompson</a></h1> 
-        
-      <ul class="nav">
-      <li class="nav"><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/Research/Researchhome.html" class="dropbtn">Research</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Master's thesis</a>
-          <a href="/Research/keck.html">Undergraduate thesis</a>
-          <a href="/Research/misc.html">Misc. projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="/FieldWork/Fieldworkhome.html" class="dropbtn">Fieldwork</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Glacier forefields in the Alps and Rockies</a> 
-          <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
-          <a href="/FieldWork/nz.html">New Zealand field school</a>
-          <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
-          <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a>
-          <a href="/FieldWork/pikas.html">Pika Project</a>            
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/Portfolios/Portfolioshome.html" class="dropbtn">Portfolio</a>
-        <div class="dropdown-content">
-          <a href="/Portfolios/writingprotfolio.html">Writing</a>
-          <a href="/Portfolios/techportfolio.html">Technical Projects</a>
-          <a href="/Portfolios/artportfolio.html">Visual Art</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/MyLife/mylifehome.html" class="dropbtn">My Life</a>
-        <div class="dropdown-content">
-          <a href="/MyLife/blog.html">Personal Blog</a>
-          <a href="/MyLife/travel.html">Travel</a> 
-          <a href="/MyLife/hobbies.html">Hobbies</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="CV.html" class="dropbtn">CV</a>
-        <div class="dropdown-content">
-        </div>
-        </li>
-        </ul>      <!--nav bar--> 
-        <br>
         <div class="whitebox">
             <h1>Graduate work at Iowa State University</h1>
             <p>Advisor: Dr. Neal Iverson</p>
@@ -74,7 +39,7 @@
             <p>Modeling the speeds of sliding glaciers reveals major uncertainty to estimates of sea-level rise and landscape evolution. In sliding models, friction between ice-entrained debris and the bed is often overlooked. For the common case of sparse debris in basal ice, theories developed in the 1970s by G.S. Boulton and B. Hallet included contradictory treatments of the forces that push particles against the bed. Boulton assumed that these forces scale with effective pressure—the difference between ice pressure and water pressure in cavities beneath particles—whereas Hallet assumed these forces depend on the rate of ice convergence toward the bed from melting and bed-parallel stretching of ice on stoss surfaces. The resultant bed-normal drag on particles depends on movement of ice past them by regelation and enhanced creep of ice.
             <p>To test these contrasting hypotheses, a large ring-shear device was used to slide temperate ice with sparse debris over a smooth rock bed. Isolated gravel-sized till particles in contact with the bed were built into an ice ring (outer diameter = 0.9 m, width = 0.20 m, thickness = 0.24 m) that rotated at a steady speed. A fluid, with its temperature controlled to the nearest 0.01oC, surrounded the ice chamber to keep the ice at its pressure-melting temperature. Meltwater drained to atmospheric pressure from the edges of the bed. During experiments, either the ice convergence rate or total bed-normal stress was incremented, and shear stress was measured until a steady value was attained. In separate rate-controlled tests without ice, the dynamic friction coefficient between the particles and the rock bed was measured.</p>
             <p>Results indicate that friction between particles and the bed depends on convergence rate. In contrast, total normal stress has no effect on bed shear stress, in agreement with Hallet’s model. However, water-filled cavities formed beneath particles rather than the regelation ice expected from Hallet’s model. These observations can be explained by an adjusted model that appeals to mass conservation in melt films that exist everywhere at ice-rock boundaries. While ice converges with the bed, melting at the tops of particles creates pressure gradients and flow within melt films that push particles against the bed. Higher convergence rates generate more melt that steepens pressure gradients. Film thicknesses are sufficient to neglect intermolecular interactions associated with premelting. Finally, by incorporating observed particle rotation, the adjusted model is made consistent with the experimental data and observations.</p>
-            <p><a href="Thompson_Anna_MSthesis.pdf">access full thesis here</a></p>
+            <p><a href="https://drive.google.com/file/d/1DF4rcGtZIbX7JaN7RMLLwa-d3CjP4xSu/view?usp=sharing" target="_blank">access full thesis here</a></p>
             </div>
             </div>
             
@@ -95,15 +60,15 @@
     
             <h3>Related blog posts</h3>
                 <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers">PolarTREC Sliding Glaciers expedition home</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-22">PolarTREC Journal: Day 8 in the Field 8/22/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-18">PolarTREC Journal: Day 5 in the Field 8/18/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-17">PolarTREC Journal: Day 4 in the Field 8/17/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-16">PolarTREC Journal: What is a glacial forefield? 8/16/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-15">PolarTREC Journal: Day 3 of Field Work 8/15/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-14">PolarTREC Journal: Signs of Glacial Erosion 8/14/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-13">PolarTREC Journal: Day 1 of Field Work 8/13/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-06-27">PolarTREC Journal: Drone Test Flight 6/27/18</a></p>
-                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-06-20">PolarTREC Journal: Drone Mapping 101 6/20/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-22" target="_blank">PolarTREC Journal: Day 8 in the Field 8/22/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-18" target="_blank">PolarTREC Journal: Day 5 in the Field 8/18/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-17" target="_blank">PolarTREC Journal: Day 4 in the Field 8/17/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-16" target="_blank">PolarTREC Journal: What is a glacial forefield? 8/16/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-15" target="_blank">PolarTREC Journal: Day 3 of Field Work 8/15/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-14" target="_blank">PolarTREC Journal: Signs of Glacial Erosion 8/14/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-13" target="_blank">PolarTREC Journal: Day 1 of Field Work 8/13/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-06-27" target="_blank">PolarTREC Journal: Drone Test Flight 6/27/18</a></p>
+                <p><a href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-06-20" target="_blank">PolarTREC Journal: Drone Mapping 101 6/20/18</a></p>
             </div>
             </div>
             </div>

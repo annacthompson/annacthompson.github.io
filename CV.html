@@ -2,6 +2,7 @@
 <html>
     <head>
     <link rel="stylesheet" href="../style.css" /> 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
 
     <title>Anna C. Thompson</title>
     <style>
@@ -10,54 +11,17 @@
         }
     </style>        
     </head>
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("/nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+    </nav>
     <body>
-    <h1><a href="../index.html" style="color:black; text-decoration:none">Anna C. Thompson</a></h1> 
-        
-      <ul class="nav">
-      <li class="nav"><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/Research/Researchhome.html" class="dropbtn">Research</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Master's thesis</a>
-          <a href="/Research/keck.html">Undergraduate thesis</a>
-          <a href="/Research/misc.html">Misc. projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="/FieldWork/Fieldworkhome.html" class="dropbtn">Fieldwork</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Glacier forefields in the Alps and Rockies</a> 
-          <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
-          <a href="/FieldWork/nz.html">New Zealand field school</a>
-          <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
-          <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a>
-          <a href="/FieldWork/pikas.html">Pika Project</a>            
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/Portfolios/Portfolioshome.html" class="dropbtn">Portfolio</a>
-        <div class="dropdown-content">
-          <a href="/Portfolios/writingprotfolio.html">Writing</a>
-          <a href="/Portfolios/techportfolio.html">Technical Projects</a>
-          <a href="/Portfolios/artportfolio.html">Visual Art</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/MyLife/mylifehome.html" class="dropbtn">My Life</a>
-        <div class="dropdown-content">
-          <a href="/MyLife/blog.html">Personal Blog</a>
-          <a href="/MyLife/travel.html">Travel</a> 
-          <a href="/MyLife/hobbies.html">Hobbies</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="CV.html" class="dropbtn">CV</a>
-        <div class="dropdown-content">
-        </div>
-        </li>
-        </ul>      <!--nav bar--> 
-        
-        <br>
         <div class="whitebox">
             <h1>CV</h1>
         <h2 style="margin-bottom: 0px;">Education</h2>
@@ -69,7 +33,7 @@
                 <li class="bullet">B.A. Geology, June 2017</li></ul>
         <h2 style="margin-bottom: 0px;">Professional Experience</h2>
             <ul>
-            <li class="title"><b>Research Assistant, Iverson Lab (June 2018 – present)</b>
+            <li class="title"><b>Research Assistant, Iverson Lab (June 2018 – present)</b><br>
             Iowa State University, Ames, IA</li>
                 <li class="bullet">Ran experiments that simulate glacier sliding to study the friction between ice-entrained debris and a glacier's bed to clarify fundamental theoretical relationships that define glacier sliding speed.</li>
                 <li class="bullet">Preparing thesis to communicate the cumulative experimental findings.</li>
@@ -112,7 +76,7 @@
                 <li  class="bullet">Elected to represent the geology graduate students and preside over meetings. </li>
                 <li  class="bullet">Organize and promote department events, outreach activities, and club projects.</li>
                 <li  class="bullet">Act as liaison between the geology graduate students and the department, other clubs, and the public.</li>
-            <li class="title"><b>Co-Chair of The Traveling School Alumnae Council (February 2017 – present)</b>
+            <li class="title"><b>Co-Chair of The Traveling School Alumnae Council (February 2017 – present)</b><br>
             The Traveling School (a semester school for high school girls)</li>
                 <li  class="bullet">Facilitate meetings and manage all ongoing projects related to The Traveling School alumnae.</li>
                 <li  class="bullet">Coordinate the logistics, group documents and communication of virtual meetings and collaboration.</li>

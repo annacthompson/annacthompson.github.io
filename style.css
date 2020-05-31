@@ -2,7 +2,7 @@ body {
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
-      margin:100px;
+      margin:10vw;
       margin-top: 50px;
         }
 
@@ -58,7 +58,11 @@ footer {
     left: 0px;
     text-align: center;
         }
-
+.Anna{
+    font-size: 35px;
+    color:black; 
+    text-decoration:none;
+}
 /*nav bar*/
 
 ul.nav {

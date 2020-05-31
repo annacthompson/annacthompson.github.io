@@ -2,6 +2,7 @@
 <html>
     <head>
     <link rel="stylesheet" href="../style.css" /> 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
 
     <title>Anna C. Thompson</title>
     <style>
@@ -10,62 +11,32 @@
         }
     </style>        
     </head>
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("/nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+    </nav>
     <body>
-    <h1><a href="../index.html" style="color:black; text-decoration:none">Anna C. Thompson</a></h1> 
-        
-      <ul class="nav">
-      <li class="nav"><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/Research/Researchhome.html" class="dropbtn">Research</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Master's thesis</a>
-          <a href="/Research/keck.html">Undergraduate thesis</a>
-          <a href="/Research/misc.html">Misc. projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="/FieldWork/Fieldworkhome.html" class="dropbtn">Fieldwork</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Glacier forefields in the Alps and Rockies</a> 
-          <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
-          <a href="/FieldWork/nz.html">New Zealand field school</a>
-          <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
-          <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a>
-          <a href="/FieldWork/pikas.html">Pika Project</a>            
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/Portfolios/Portfolioshome.html" class="dropbtn">Portfolio</a>
-        <div class="dropdown-content">
-          <a href="/Portfolios/writingprotfolio.html">Writing</a>
-          <a href="/Portfolios/techportfolio.html">Technical Projects</a>
-          <a href="/Portfolios/artportfolio.html">Visual Art</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/MyLife/mylifehome.html" class="dropbtn">My Life</a>
-        <div class="dropdown-content">
-          <a href="/MyLife/blog.html">Personal Blog</a>
-          <a href="/MyLife/travel.html">Travel</a> 
-          <a href="/MyLife/hobbies.html">Hobbies</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="CV.html" class="dropbtn">CV</a>
-        <div class="dropdown-content">
-        </div>
-        </li>
-        </ul>      <!--nav bar--> 
-        <br>
         <div class="whitebox">
             <h1>Writing Portfolio</h1>
             
-            <h2>h2</h2>
-                <p>Advisor: Dr. Neal Iverson</p>
-                <h3><a href="MSThesis.html">h3</a></h3>
-                    <p>I love pikas! This is my oldest and cutest fieldwork, which I have been a part of since high school.</p>
-                <h3>h3</h3>
-                    <p>p</p>
+            <h2>Science writing</h2>
+                <h3>Research</h3>
+                    <p><a href="https://drive.google.com/file/d/1DF4rcGtZIbX7JaN7RMLLwa-d3CjP4xSu/view?usp=sharing" target="_blank">Master's thesis, 67 p., 2020</a></p>
+                    <p><a href="https://drive.google.com/file/d/1pxOMfZ84Kouq4hSDqEkzWk6fwQgs8WIu/view?usp=sharing" target="_blank">Undergraduate thesis, 39 p., 2017</a></p>
+                    <p><a href="/FieldWork/keckdoc.pdf">Keck short contribution, 7 p., 2017</a></p>
+                <h3>Technical</h3>
+                    <p><a href="https://drive.google.com/file/d/1KAIl43sQxWj1ZBfHhmgSW4vmQF4X7Yf1/view?usp=sharing" target="_blank">Carleton Arb Restoration</a></p>
+                <h3>Non-technical</h3>
+                    <p>News story, 2019</p>
+                    <p>PolarTREC blog post, 2018</p>
+            <h2>Creative writing</h2>
+                <p>Soccer story, 2017</p>
         </div>
 
     </body>

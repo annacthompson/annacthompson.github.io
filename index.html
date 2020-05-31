@@ -2,68 +2,101 @@
 <html>
     <head>
     <link rel="stylesheet" href="style.css" /> 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
 
     <title>Anna C. Thompson</title>
     <style>
     body {
       background-image: url('photos/flockhill3.jpg');
-        }
+    }
+    .container {
+      position: relative;
+    }
+    img{
+        width: 100%;
+    }
+    .col2{
+        width: 33%;
+        margin-left: 0px;
+        padding: 20px;
+    }
+    .overlay {
+      position: absolute;
+      /*top: 0;*/
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 35%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(1, 1, 1, 0.6);
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      color: white;
+      opacity: 1;
+      font-size: 1.4vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
     </style>    
     </head>
-    <body>
-    <h1><a href="/index.html" style="color:black; text-decoration:none">Anna C. Thompson</a></h1> 
+    
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+    </nav>
+    
+    <body>     
         
-      <ul class="nav">
-      <li class="nav"><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/Research/Researchhome.html" class="dropbtn">Research</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Master's thesis</a>
-          <a href="/Research/keck.html">Undergraduate thesis</a>
-          <a href="/Research/misc.html">Misc. projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="/FieldWork/Fieldworkhome.html" class="dropbtn">Fieldwork</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Glacier forefields in the Alps and Rockies</a> 
-          <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
-          <a href="/FieldWork/nz.html">New Zealand field school</a>
-          <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
-          <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a>
-          <a href="/FieldWork/pikas.html">Pika Project</a>            
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/Portfolios/Portfolioshome.html" class="dropbtn">Portfolio</a>
-        <div class="dropdown-content">
-          <a href="/Portfolios/writingprotfolio.html">Writing</a>
-          <a href="/Portfolios/techportfolio.html">Technical Projects</a>
-          <a href="/Portfolios/artportfolio.html">Visual Art</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/MyLife/mylifehome.html" class="dropbtn">My Life</a>
-        <div class="dropdown-content">
-          <a href="/MyLife/blog.html">Personal Blog</a>
-          <a href="/MyLife/travel.html">Travel</a> 
-          <a href="/MyLife/hobbies.html">Hobbies</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="CV.html" class="dropbtn">CV</a>
-        <div class="dropdown-content">
-        </div>
-        </li>
-        </ul>      <!--nav bar--> 
-        <br>
         <div class="whitebox">
             <h2>About me</h2>
             <p>HI, I'm Anna.</p>
-            <h2>Wondering where to start? Here are some highlights:</h2>
-            <p><a href="Research/MSThesis.html">My most recent research</a><br>
-            <a href="FieldWork/Fieldworkhome.html">An interactive map summarizing my fieldwork</a></p>
-            <br> <br> 
+            
+            <h2>Wondering where to start? Here are some highlights:</h2>            
+            <div class="flex">
+            <div class="col2" style="width: 28.8%">
+                <a href="Portfolios/artportfolio.html"> <div class="container">
+                    <img src="Portfolios/portfolioitems/page2.jpg" style="border-radius: 4px">                  
+                    <div class="overlay">
+                        <div class="text">Art that I'm proud of</div>
+                    </div></div>
+                </a>
+            </div>
+            <div class="col2" style="width: 35.65%">
+                <a href="FieldWork/Fieldworkhome.html"> <div class="container">
+                    <img src="../photos/mapscreenshot.jpg" style="border-radius: 4px">                  
+                    <div class="overlay">
+                        <div class="text">An interactive map summarizing my fieldwork</div></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col2" style="width: 38%">
+                <a href="Research/MSThesis.html"> <div class="container">
+                    <img src="../photos/annaandice2.jpg" style="border-radius: 4px">                  
+                  <div class="overlay">
+                    <div class="text">My most recent research</div>
+                    </div></div>
+                </a>
+            </div>
+            </div>
+            
         </div>
 
     </body>

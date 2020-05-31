@@ -2,6 +2,7 @@
 <html>
     <head>
     <link rel="stylesheet" href="../style.css" /> 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
 
     <title>Anna C. Thompson</title>
     <style>
@@ -10,49 +11,17 @@
         }
     </style>        
     </head>
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("/nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+    </nav>
     <body>
-    <h1><a href="../index.html" style="color:black; text-decoration:none">Anna C. Thompson</a></h1> 
-        
-      <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/Research/Researchhome.html" class="dropbtn">Research</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Master's thesis</a>
-          <a href="/Research/keck.html">Undergraduate thesis</a>
-          <a href="/Research/misc.html">Misc. projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="/FieldWork/Fieldworkhome.html" class="dropbtn">Fieldwork</a>
-        <div class="dropdown-content">
-          <a href="/Research/MSThesis.html">Glacier forefields in the Alps and Rockies</a> 
-          <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
-          <a href="/FieldWork/nz.html">New Zealand field school</a>
-          <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
-          <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a>
-          <a href="/FieldWork/pikas.html">Pika Project</a>            
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/Portfolios/Portfolioshome.html" class="dropbtn">Portfolio</a>
-        <div class="dropdown-content">
-          <a href="/Portfolios/writingprotfolio.html">Writing</a>
-          <a href="/Portfolios/techportfolio.html">Technical Projects</a>
-          <a href="/Portfolios/artportfolio.html">Visual Art</a>
-        </div>
-        </li>
-        <li class="dropdown">
-        <a href="/MyLife/mylifehome.html" class="dropbtn">My Life</a>
-        <div class="dropdown-content">
-          <a href="/MyLife/blog.html">Personal Blog</a>
-          <a href="/MyLife/travel.html">Travel</a> 
-          <a href="/MyLife/hobbies.html">Hobbies</a>
-        </div>
-        </li>
-        <li><a href="/CV.html">CV</a></li>
-        </ul>      <!--nav bar--> 
-        <br>
         <div class="whitebox">
             <h1>Home</h1>
             
