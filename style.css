@@ -4,6 +4,7 @@ body {
       background-size: cover;
       margin:10vw;
       margin-top: 50px;
+      font-family: arial;
         }
 
 .whitebox{
@@ -12,14 +13,14 @@ body {
       border-radius: 5px;
       padding: 30px;
       padding-top: 5px;
-        
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 .flex{
     display:flex;
     flex-direction:row-reverse;
 }
 .col2{
-    margin-left: 30px;
+    margin-left: 5vw;
 }
 
 p{
@@ -34,7 +35,10 @@ ul{
 }
 .title{
     margin-top: 10px; 
-    list-style-type: none
+    list-style-type: none;
+    font-size: 14px;
+    transition: 0.4s;
+
         }
 .bullet{
     margin:0px;
@@ -44,10 +48,9 @@ h3{
     margin-left: 20px;
 }
 a{
-        opacity:1; 
-        margin:0px;
-
-        }
+    opacity:1; 
+    margin:0px;    
+}
 
 footer {
     
@@ -71,6 +74,8 @@ ul.nav {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
 }
 
 li.nav {

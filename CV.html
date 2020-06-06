@@ -9,6 +9,42 @@
     body {
       background-image: url('../photos/flockhill3.jpg');
         }
+    h2{
+        margin-bottom: 0px;
+        }
+    p{
+        font-size: 15px;  
+        }
+    .accordion {
+      background-color:unset;
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      height: 3.5rem;
+    }
+
+    .active, .accordion:hover {
+      background-color: unset;
+      color:black;
+      font-size: 16px;
+    }
+    .bullet {
+      font-size: 14px;
+        }
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: unset;
+      overflow: hidden;
+      margin-top: 10px;
+      text-indent: -1em;
+      padding-left: 1em;
+    }
     </style>        
     </head>
     <nav>
@@ -23,77 +59,109 @@
     </nav>
     <body>
         <div class="whitebox">
-            <h1>CV</h1>
-        <h2 style="margin-bottom: 0px;">Education</h2>
+            
+        <h1>CV</h1>
+            
+        <p style="margin-left: 0px"><a href="#edu">Education</a>, <a href="#prof">Professional Experience</a>, <a href="#lead">Leadership Experience</a>, <a href="#awards">Awards and Recognition</a>, <a href="#pubs">Publications and Professional Presentations</a>, <a href="#skills">Additional Skills</a>, <a href="#classes">Featured Coursework</a>, <a href="#memb">Memberships</a></p>
+            
+        <h2 id="edu" style="margin-bottom: 0px;">Education</h2>
             <ul>
             <li class="title"><b>Iowa State University,</b> Ames, IA</li>
                 <li class="bullet">M.S. Geology, advised by Dr. Neal Iverson, May 2020</li>
                 <li class="bullet">GIS Certificate, expected in June 2020</li>
             <li class="title"><b>Carleton College,</b> Northfield, MN</li>
-                <li class="bullet">B.A. Geology, June 2017</li></ul>
-        <h2 style="margin-bottom: 0px;">Professional Experience</h2>
-            <ul>
-            <li class="title"><b>Research Assistant, Iverson Lab (June 2018 – present)</b><br>
-            Iowa State University, Ames, IA</li>
-                <li class="bullet">Ran experiments that simulate glacier sliding to study the friction between ice-entrained debris and a glacier's bed to clarify fundamental theoretical relationships that define glacier sliding speed.</li>
-                <li class="bullet">Preparing thesis to communicate the cumulative experimental findings.</li>
-                <li class="bullet">Regularly prepare and present research in technical talks, posters, and papers. </li>
-                <li class="bullet">Conducted fieldwork and provided logistical support in the Canadian Rockies and Swiss Alps.</li>
-                <li class="bullet">Wrote lab tutorial and mentored students new to working in the lab.</li>
-            <li class="title"><b>Teaching Assistant, ISU GEOL100L (January 2018 – May 2018)</b><br>
-            Iowa State University, Ames, IA</li>
+                <li class="bullet">B.A. Geology, June 2017</li></ul>  
+            
+        <h2 id="prof">Professional Experience</h2>
+            <button class="accordion"><b>Research Assistant, Iverson Lab (June 2018 – May 2020)</b><br>Iowa State University, Ames, IA</button>
+            <div class="panel">
+            <li class="bullet">Ran experiments that simulate glacier sliding to study the friction between ice-entrained debris and a glacier's bed to clarify fundamental theoretical relationships that define glacier sliding speed.</li>
+            <li class="bullet">Wrote thesis and research article to communicate the cumulative experimental findings.</li>
+            <li class="bullet">Regularly prepared and presented research in technical talks, posters, and papers. </li>
+            <li class="bullet">Conducted fieldwork and provided logistical support in the Canadian Rockies and Swiss Alps.</li>
+            <li class="bullet">Wrote lab tutorial and mentored students new to working in the lab.</li>
+            <p style="margin-left: 43px"><a href="/Research/MSThesis.html" style="font-size: 14px;">more</a></p>
+        </div><br>
+
+            <button class="accordion"><b>Teaching Assistant, ISU GEOL100L (January 2018 – May 2018)</b><br>Iowa State University, Ames, IA</button>
+            <div class="panel">
                 <li class="bullet">Lectured, distributed labs exercises, graded, and mentored final research projects.</li>
                 <li class="bullet">Engaged and monitored the progress of students with many different ability levels and interests.</li>
-            <li class="title"><b>Keck Student Researcher (June 2016 – June 2017)</b><br>
-            Keck Geology Consortium, Reykjanes Peninsula, Iceland, Wooster, OH, and Northfield, MN</li>
+            </div><br>
+
+            <button class="accordion"><b>Keck Student Researcher (June 2016 – June 2017)</b><br>Keck Geology Consortium, Reykjanes Peninsula, Iceland, Wooster, OH, and Northfield, MN</button>
+            <div class="panel">
                 <li class="bullet">Studied vesicle distribution in subglacial pillow basalt in Iceland for my undergraduate thesis.</li>
                 <li  class="bullet">Conducted fieldwork in Iceland, lab work at College of Wooster and research at Carleton College.</li>
                 <li  class="bullet">Presented research in technical talks, posters, and papers throughout the year.</li>
-            <li class="title"><b>Teaching Assistant, Carleton College (September 2015 – June 2017)</b><br>
-            Carleton College, Northfield, MN</li>
+                <p style="margin-left: 43px"><a href="/Research/keck.html" style="font-size: 14px;">more</a></p>
+            </div><br>
+
+            <button class="accordion"><b>Teaching Assistant, Carleton College (September 2015 – June 2017)</b><br>Carleton College, Northfield, MN</button>
+            <div class="panel">
                 <li  class="bullet">Coordinated transportation and provided teaching support for 3 intro geology labs and fieldtrips.</li>
-            <li class="title"><b>Carleton College Student Work Positions (January 2015 – June 2017)</b><br>
-            Carleton College, Northfield, MN</li>
+            </div><br>
+
+            <button class="accordion"><b>Carleton College Student Work Positions (January 2015 – June 2017)</b><br>Carleton College, Northfield, MN</button>
+            <div class="panel">
                 <li  class="bullet">Worked in the Geology/Chemistry Administrative Office, Registrar’s Office and Telecom Office.</li>
                 <li  class="bullet">Located outcrops in Oregon from GPS data and collected samples for geochemical analysis.</li>
-            <li class="title"><b>NASA Astrobiology Extern (December 2016)</b><br>
-            NASA Ames Research Center, Moffett Field, CA</li>
+            </div><br>
+
+            <button class="accordion"><b>NASA Astrobiology Extern (December 2016)</b><br>NASA Ames Research Center, Moffett Field, CA</button>
+            <div class="panel">
                 <li  class="bullet">Edited outreach materials and updated database of Astrobiology Graduate Conference participants.</li>
-            <li class="title"><b>Inventory Manager (Summers 2015 – 2016)</b><br>
-                Minnesota Honey Producers Association, St. Paul, MN</li>
+            </div><br>
+
+            <button class="accordion"><b>Inventory Manager (Summers 2015 – 2016)</b><br>Minnesota Honey Producers Association, St. Paul, MN</button>
+            <div class="panel">
                 <li  class="bullet">Provided high-energy customer service to thousands of daily visitors at the MN State Fair.</li>
                 <li  class="bullet">Inventoried over 100 honey products and managed the daily schedules of eight employees.</li>
-            <li class="title"><b>Summer Ballet Program Instructor and Coordinator (Summers 2011 - 2014)</b><br>
-            Oregon Ballet Academy, Eugene, OR</li>
-                <li  class="bullet">Developed camp curriculums and taught four weeklong programs per year. </li>
-                <li  class="bullet">Supervised the work of other ballet teachers and assistants. </li>
-                <li  class="bullet">Selected and purchased all supplies for classes, games and crafts within a tight budget.</li>
-                </ul> 
-        <h2 style="margin-block-end: 0;">Leadership Experience</h2>
-            <ul>
-            <li class="title"><b>President of Geology Graduate Student Organization (August 2019 – present)</b><br>
-            Iowa State University, Ames, IA</li>
+            </div><br>
+            
+            <button class="accordion"><b>Summer Program Instructor and Coordinator (Summers 2011 - 2014)</b><br>Oregon Ballet Academy, Eugene, OR</button>
+            <div class="panel">
+            <li  class="bullet">Developed camp curriculums and taught four weeklong programs per year. </li>
+            <li  class="bullet">Supervised the work of other ballet teachers and assistants. </li>
+            <li  class="bullet">Selected and purchased all supplies for classes, games and crafts within a tight budget.</li>
+        </div><br>
+
+        <h2 id="lead" style="margin-block-end: 0;">Leadership Experience</h2>
+            
+            <button class="accordion"><b>President of Geology Graduate Student Organization (August 2019 – present)</b><br>Iowa State University, Ames, IA</button>
+            <div class="panel">
                 <li  class="bullet">Elected to represent the geology graduate students and preside over meetings. </li>
                 <li  class="bullet">Organize and promote department events, outreach activities, and club projects.</li>
                 <li  class="bullet">Act as liaison between the geology graduate students and the department, other clubs, and the public.</li>
-            <li class="title"><b>Co-Chair of The Traveling School Alumnae Council (February 2017 – present)</b><br>
-            The Traveling School (a semester school for high school girls)</li>
+            </div><br>            
+            
+            <button class="accordion"><b>Co-Chair of The Traveling School Alumnae Council (February 2017 – present)</b><br>The Traveling School (a semester school for high school girls)</button>
+            <div class="panel">
                 <li  class="bullet">Facilitate meetings and manage all ongoing projects related to The Traveling School alumnae.</li>
                 <li  class="bullet">Coordinate the logistics, group documents and communication of virtual meetings and collaboration.</li>
                 <li  class="bullet">Designed and created an alumnae networking website and database that I continue to manage.</li>
-            <li class="title"><b>Guest Leader and Participant on Swiss Alps Fieldtrip (August 2018)</b><br>
-            Iowa State University, Switzerland</li>
+            </div><br>      
+            
+            <button class="accordion"><b>Guest Leader and Participant on Swiss Alps Fieldtrip (August 2018)</b><br>Iowa State University, Switzerland</button>
+            <div class="panel">
                 <li  class="bullet">Designed content and led a portion of a fieldtrip at Findelen Glacier above Zermatt, Switzerland.</li>
                 <li  class="bullet">Traveled with a group of 20 students for one week to study the formation of the Swiss Alps.</li>
-            <li class="title"><b>Outdoor Club Trip Leader (May 2014 – September 2016)</b><br>
-            Carleton College, Northfield, MN</li>
+                <p style="margin-left: 43px"><a href="/Research/MSThesis.html#fieldtrip" style="font-size: 14px;">more</a></p>
+            </div><br>  
+            
+            <button class="accordion"><b>Outdoor Club Trip Leader (May 2014 – September 2016)</b><br>Carleton College, Northfield, MN</button>
+            <div class="panel">
                 <li  class="bullet">Organized and lead three weekend caving trips for Carleton students in Southern Minnesota.</li>
-            <li class="title"><b>New Zealand Off Campus Study Program (January 2016 – March 2016)</b><br>
-            Carleton College, Northfield, MN</li>
+            </div><br>  
+            
+            <button class="accordion"><b>New Zealand Off Campus Study Program (January 2016 – March 2016)</b><br>Carleton College, Northfield, MN</button>
+            <div class="panel">
                 <li  class="bullet">Traveled with a group of 20 students for 10 weeks to study the geology of New Zealand.</li>
                 <li  class="bullet">Worked in small groups on mapping assignments, outcrop analysis, etc.</li>
-            </ul> 
-        <h2 style="margin-block-end: 0;">Awards and Recognition</h2>
+                <p style="margin-left: 43px"><a href="/FieldWork/nz.html" style="font-size: 14px;">more</a></p>
+            </div><br>  
+            
+        <h2 id="awards" style="margin-block-end: 0;">Awards and Recognition</h2>
             <ul>
             <li  class="title"><b>Best Geology Graduate Student Seminar Talk Runner-Up,</b> Iowa State University, May 2019</li>
             <li  class="title"><b>First Place Graduate Student Poster Presentation,</b> GSA North-Central Meeting, April 2018</li>
@@ -102,7 +170,8 @@
             <li  class="title"><b>Duncan Stewart Fellowship,</b> Carleton College, June 2017</li>
             <li  class="title"><b>Nominated for Sigma Xi Scientific Research Honor Society,</b> Carleton College, June 2017</li>
             </ul>
-        <h2 style="margin-block-end: 0;">Publications and Professional Presentations</h2>
+            
+        <h2 id="pubs" style="margin-block-end: 0;">Publications and Professional Presentations</h2>
             <div>
                 <p style="padding-left: 20px ; text-indent: -22px ;"><b>Thompson, A. C.,</b> 2020, An experimental study of debris-bed friction during glacier sliding [M.Sc. thesis]: Iowa State University, 67 p. <a href="/Research/Thompson_Anna_MSthesis.pdf">pdf</a></p>
                 <p style="padding-left: 20px ; text-indent: -22px ;"><b>Thompson, A. C.,</b> Iverson, N. R., Zoet, L. K., An experimental study of subglacial debris-bed friction during basal slip. Oral presentation at: American Geophysical Society Meeting; 2019 Dec 13; San Francisco, CA. <a href="https://agu.confex.com/agu/fm19/meetingapp.cgi/Paper/518476">abstract</a></p>
@@ -113,7 +182,7 @@
                 <p style="padding-left: 20px ; text-indent: -22px ;">Wallace, C., Kumpf, B., Heineman, R., Lembo, C., Orden, M., <b>Thompson, A. C.,</b> Engen, C., Kochtitzky, W., Pollock, M., Edwards., B. R., and Hiatt, A. Geochemical Constraints on the Magmatic System and Eruptive Environment of a Glaciovolcanic Tindar Ridge from Undirhlíðar, SW Iceland. Poster session presented at: Geological Society of America; 2016 Sept 26; Denver, CO. <a href="https://gsa.confex.com/gsa/2016AM/meetingapp.cgi/Paper/286588">abstract</a></p>
                 <p style="padding-left: 20px ; text-indent: -22px ;">Heineman, R., Lembo, C., Engen, C., Kochtitzky, W., Wallace, C., Orden, M., <b>Thompson, A. C.,</b> Kumpf, B., Edwards, B. R., and Pollock, M. New Insights on the Formation of Glaciovolcanic Tindar Ridges from Detailed mapping of Undirhlidar Ridge, SW Iceland. Poster session presented at: Geological Society of America; 2016 Sept 26; Denver, CO. <a href="https://gsa.confex.com/gsa/2016AM/meetingapp.cgi/Paper/286590">abstract</a></p>
             </div>
-        <h2 style="margin-block-end: 0;">Additional Skills</h2>
+        <h2 id="skills" style="margin-block-end: 0;">Additional Skills</h2>
             <ul>
             <li  class="bullet">Proficient with the Microsoft Office suite (Excel, Word, PowerPoint)</li>
             <li  class="bullet">Proficient with Adobe Illustrator</li>   
@@ -123,30 +192,44 @@
             <li  class="bullet">Limited experience converting photographs to point clouds using Agisoft Photoscan</li>  
             <li  class="bullet">Technical writing and public speaking proficiency.</li>
             </ul>
-        <h2 style="margin-block-end: 0;">Featured Coursework</h2>
-            <ul>
-            <li  class="title">Iowa State University</li>
-                <li  class="bullet"><b>NREM.555X</b> Stream Restoration</li>
+            
+        <h2 id="classes" style="margin-block-end: 0;">Featured Coursework</h2>
+            <button class="accordion" style="height: 2rem;"><b>Iowa State University</b> (2018-2020)</button>
+            <div class="panel">
+                <div style="display:-webkit-inline-box;">
+                <li  class="bullet"><b>NREM.555X</b> Stream Restoration &nbsp;</li>
+                    <a href="/FieldWork/streams.html" style="font-size: 14px;">more</a></div>
                 <li  class="bullet"><b>GEOL.574</b> Glacial and Quaternary Geology</li>
-                <li  class="bullet"><b>GEOL.558</b> Web Mapping</li>
+                <div style="display:-webkit-inline-box;">
+                <li  class="bullet"><b>GEOL.558</b> Web Mapping &nbsp;</li>
+                    <a href="/Portfolios/techportfolio.html" style="font-size: 14px;">more</a></div>
                 <li  class="bullet"><b>GEOL.579</b> Surficial Processes</li>
                 <li  class="bullet"><b>GEOL.568X</b> Applied Geostatistics for Geoscientists</li>
                 <li  class="bullet"><b>GEOL.559X</b> Quantitative Methods in Geology</li>
                 <li  class="bullet"><b>GEOL.590A</b> Special Topics Glaciology seminar</li>
                 <li  class="bullet"><b>GEOL.552</b> GIS for Geoscientists</li>
-            <li  class="title">Carleton College</li>
+            </div> <br>
+            <button class="accordion" style="height: 2rem;"><b>Carleton College</b> (2013-2017)</button>
+            <div class="panel">
                 <li  class="bullet"><b>GEOL.230</b> Paleobiology</li>
-                <li  class="bullet"><b>GEOL.365</b> Structural Geology</li>
+                <div style="display:-webkit-inline-box;">
+                <li  class="bullet"><b>GEOL.365</b> Structural Geology &nbsp;</li>
+                    <a href="/FieldWork/ca.html" style="font-size: 14px;">more</a></div>
                 <li  class="bullet"><b>GEOL.340</b> Hydrology</li>
                 <li  class="bullet"><b>MATH.215</b> Intro to Statistics</li>
-                <li  class="bullet"><b>GEOL.210</b> Geomorphology</li>
+                <div style="display:-webkit-inline-box;">
+                <li  class="bullet"><b>GEOL.210</b> Geomorphology &nbsp;</li>
+                    <a href="/FieldWork/streams.html" style="font-size: 14px;">more</a></div>
                 <li  class="bullet"><b>PHYS.152</b> Environmental Physics</li>
                 <li  class="bullet"><b>PHYS.131</b> Newtonian Physics</li>
                 <li  class="bullet"><b>MATH.232</b> Linear Algebra</li>
                 <li  class="bullet"><b>ARTS.110</b> Observational Drawing</li>
-                <li  class="bullet"><b>GEOL.286/288</b> Topics in North/South Island Geology</li>
+                <div style="display:-webkit-inline-box;">
+                <li  class="bullet"><b>GEOL.286/288</b> Topics in North/South Island Geology &nbsp;</li>
+                    <a href="/FieldWork/nz.html" style="font-size: 14px;">more</a></div>
                 <li  class="bullet"><b>GEOL.285/287</b> Geology in New Zealand</li>
-                <li  class="bullet"><b>GEOL.289</b> Basic Field Drawing</li>
+                <div style="display:-webkit-inline-box;"><li  class="bullet"><b>GEOL.289</b> Basic Field Drawing &nbsp;</li>
+                    <a href="/Portfolios/artportfolio.html" style="font-size: 14px;"> more</a></div>
                 <li  class="bullet"><b>GEOL.360</b> Sedimentology and Stratigraphy</li>
                 <li  class="bullet"><b>GEOL.220</b> Tectonics</li>
                 <li  class="bullet"><b>GEOL.292</b> Geochemistry of the CRVP</li>
@@ -162,8 +245,10 @@
                 <li  class="bullet"><b>BIOL.210</b> Global Change Biology</li>
                 <li  class="bullet"><b>CS.111</b> Intro to Computer Science</li>
                 <li  class="bullet"><b>BIOL.125</b> Genes and Evolution</li>
-            </ul>
-        <h2 style="margin-block-end: 0;">Memberships</h2>
+            </div> 
+            
+            
+        <h2 id="memb" style="margin-block-end: 0;">Memberships</h2>
             <ul>
             <li  class="bullet"><b>Sigma Xi,</b> nominated member</li>
             <li  class="bullet"><b>American Geophysical Union,</b> member</li>
@@ -176,12 +261,27 @@
             </ul>
         </div>
 
-    </body>
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>    </body>
     <footer>
    
         <p>Page created by Anna Thompson.
-            <a href="mailto:acthompson211@gmail.com">acthompson211@gmail.com</a>
-            <a href="www.linkedin.com/in/acthompson211">LinkedIn</a>        
+            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
+            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
             </p>
 
     </footer>
