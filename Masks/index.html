@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179474773-1');
+        </script>
+
+    <link rel="stylesheet" href="../style.css" /> 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
+
+    <title>Anna C. Thompson</title>
+    <style>
+    body {
+      background-color: cadetblue;
+      background-image: url('../photos/cows.JPG');
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE 10 */
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+    </style>        
+    </head>
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("/nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+    </nav>
+    <body>
+        <div class="whitebox" style="background: rgba(252, 252, 252, 0.85);
+        ">
+            <h1>Face Masks</h1>
+            <p>Hello friends, family, and friends of friends! We could all probably use a new mask right about now!</p><br>
+            <p>This page displays face masks that I have made over the last several 
+              months and would love to send out into the world. They are made with two layers of fabric and include an adjustable over-the-head elastic. 
+              I have been wearing mine for months and find the shape and elastic to be secure and comfortable. I have been able to wash them 
+              and like that I can wear the elastic around my neck and over or under my hair. I've had positive feedback from many others as well!</p>
+              <br>
+            <img src="medley3.jpeg" style="width:80%; display: block; margin-left: auto; margin-right: auto;">
+              <br>
+            <p>What you need to know:</p>
+            <ul style="margin-left: 10%;">
+              <li>There are 3 sizes: Large (men and women), Medium (women and teenagers), and Small (children). For reference, I wear a medium. </li>
+              <li>All masks come with over-the-head elastic, whether it is pictured or not.</li>
+              <li>Some have nose wires. I can add a nose wire to any mask for $3.</li>
+              <li>I am happy to take requests and answer questions.</li>
+              <li>Pay via cash, check or Venmo.</li>
+              <li>Shipping is free.</li>
+            </ul> 
+              <br>
+            <p style="font-size: 10pt;">Disclaimer: Are they perfect? No. Will anyone notice? Probably not. Any blemishes, like loose thread, are hidden on the 
+              inside. And of course, I can make no promises or guarantees about their effectiveness in a health setting. Use at your own risk.</p>
+              <br><br>
+  <div style="text-align: center" id="myHeader">
+    <a href="https://forms.gle/6gGdtegsYB6Hx3C5A" target="_blank" style="font-size: 20pt; background-color:salmon; color:white; padding: 14px 25px; text-align:center; text-decoration: none; display:inline-block;">ORDER HERE</a>
+    <br><br>
+    <p style="color: salmon">If you want more than one, take 50% off the price your extras.</p>
+    <br><br>
+    <p>Click on the buttons to change the grid view below.</p>
+    <button class="btn" onclick="one()">1</button>
+    <button class="btn" onclick="two()">2</button>
+    <button class="btn active" onclick="four()">4</button>
+  </div>
+  <h2>Large</h2>
+  <div class="row"> 
+    <div class="column">
+      <img src="greenlav.jpeg" style="width:100%">
+      <figcaption>$27 Green lavendar</figcaption>
+      <img src="paisley.jpeg" style="width:100%">
+      <figcaption>$15 Paisley Party</figcaption>
+      <img src="dino.jpeg" style="width:100%">
+      <figcaption>$15 Dino</figcaption>
+    </div>
+    <div class="column">
+      <img src="greengray.jpeg" style="width:100%">
+      <figcaption>$25 Gray Flower</figcaption>
+      <img src="paisley.jpeg" style="width:100%">
+      <figcaption>$15 Paisley Party</figcaption>
+    </div>  
+    <div class="column">
+      <img src="pink.jpeg" style="width:100%">
+      <figcaption>$18 Salmon w/ nose wire</figcaption>
+      <img src="paisley.jpeg" style="width:100%">
+      <figcaption>$15 Paisley Party</figcaption>
+    </div>
+    <div class="column">
+      <img src="navyblue.jpeg" style="width:100%">
+      <figcaption>$18 Navy w/ nose wire</figcaption>
+      <img src="dino.jpeg" style="width:100%">
+      <figcaption>$15 Dino</figcaption>
+    </div>
+  </div>
+
+  <h2>Medium</h2>
+  <div class="row"> 
+    <div class="column">
+      <img src="bluelav.jpeg" style="width:100%">
+      <figcaption>$27 Blue lavendar</figcaption>
+      <img src="gray.jpeg" style="width:100%"> 
+      <figcaption>$15 Gray</figcaption>
+      <img src="navy.jpeg" style="width:100%"> 
+      <figcaption>$15 Navy</figcaption>
+    </div>
+    <div class="column">
+      <img src="greenleaf.jpeg" style="width:100%">
+      <figcaption>$26 Green Leaf</figcaption>
+      <img src="greenstripe.jpeg" style="width:100%">
+      <figcaption>$15 Green Stripes</figcaption>
+      <img src="navy.jpeg" style="width:100%"> 
+      <figcaption>$15 Navy</figcaption>
+    </div>  
+    <div class="column">
+      <img src="bluesunnies.jpeg" style="width:100%">
+      <figcaption>$26 Blue Sunnies</figcaption>
+      <img src="rocketship.jpeg" style="width:100%">
+      <figcaption>$15 Rocketship</figcaption>
+    </div>
+    <div class="column">
+      <img src="flowers.jpeg" style="width:100%">
+      <figcaption>$18 Flowers w/ nose wire</figcaption>
+      <img src="rocketship.jpeg" style="width:100%">
+      <figcaption>$15 Rocketship</figcaption>
+    </div>
+    <div class="column">
+
+    </div>
+  </div>
+
+  <h2>Small</h2>
+  <p>There are many more dino and rocketship masks in the works for kiddos! The gray mask pictured is a medium size as a placeholder, but I also have a small size. </p>
+  <div class="row"> 
+    <div class="column">
+      <img src="plaidkiddo.jpeg" style="width:100%">
+      <figcaption>$10 Plaid</figcaption>
+      <img src="rocketshipkiddo.jpeg" style="width:100%">
+      <figcaption>$10 Rocketship</figcaption>
+    </div>
+    <div class="column">
+      <img src="dinokiddo.jpeg" style="width:100%">
+      <figcaption>$10 Dino</figcaption>
+      <img src="dinokiddo.jpeg" style="width:100%">
+      <figcaption>$10 Dino</figcaption>
+    </div>  
+    <div class="column">
+      <img src="rocketshipkiddo.jpeg" style="width:100%">
+      <figcaption>$10 Rocketship</figcaption>
+      <img src="dinokiddo.jpeg" style="width:100%">
+      <figcaption>$10 Dino</figcaption>
+    </div>
+    <div class="column">
+      <img src="gray.jpeg" style="width:100%">
+      <figcaption>$10 Gray</figcaption>
+    </div>
+  </div>
+
+  <h2>Requests</h2>
+  <p>I am happy to take requests, but they will take a bit more time. These masks are sold or in various stages of completion to give an idea of other options. 
+     I have more of most of the plain fabric colors and embroidery thread to recreate versions of anything you see on this page. 
+  </p>
+  <div class="row"> 
+    <div class="column">
+      <img src="navytrees.jpeg" style="width:100%">
+      <img src="pinkfish.jpeg" style="width:100%">
+      <img src="dinokiddo.jpeg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="greentrees.jpeg" style="width:100%">
+      <img src="navysun.jpeg" style="width:100%">
+      <img src="pinksun.jpeg" style="width:100%">
+    </div>  
+    <div class="column">
+      <img src="bluecones.jpeg" style="width:100%">
+      <img src="rocketship.jpeg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="greencones.jpeg" style="width:100%">
+      <img src="pinkflowers.jpeg" style="width:100%"> 
+    </div>
+  </div>
+  <br>
+  <div style="text-align: center" id="myHeader">
+    <a href="https://forms.gle/6gGdtegsYB6Hx3C5A" target="_blank" style="font-size: 20pt; background-color:salmon; color:white; padding: 14px 25px; text-align:center; text-decoration: none; display:inline-block;">ORDER HERE</a>
+  </div>
+
+  <script>
+  // Get the elements with class="column"
+  var elements = document.getElementsByClassName("column");
+  
+  // Declare a loop variable
+  var i;
+  
+  // Full-width images
+  function one() {
+      for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "100%";  // IE10
+      elements[i].style.flex = "100%";
+    }
+  }
+  
+  // Two images side by side
+  function two() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "50%";  // IE10
+      elements[i].style.flex = "50%";
+    }
+  }
+  
+  // Four images side by side
+  function four() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "25%";  // IE10
+      elements[i].style.flex = "25%";
+    }
+  }
+  
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myHeader");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+            </div>
+
+    </body>
+    <footer>
+   
+        <p>Page created by Anna Thompson.
+            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
+            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
+            </p>
+
+    </footer>
+</html>
