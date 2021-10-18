@@ -1,61 +1,149 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-179474773-1');
-        </script>
-
-    <link rel="stylesheet" href="../style.css" /> 
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
-
+  <head>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-179474773-1");
+    </script>
+    <link rel="stylesheet" href="/style.css" />
     <title>Anna C. Thompson</title>
     <style>
-    body {
-      background-image: url('../photos/flockhill3.jpg');
-        }
-    </style>        
-    </head>
-    <nav>
-        <!--Navigation bar-->
-        <div id="nav-placeholder"></div>
-        <script>
-        $(function(){
-          $("#nav-placeholder").load("/nav.html");
-        });
-        </script>
-        <!--end of Navigation bar-->
-    </nav>
-    <body>
-        <div class="whitebox">
-            <h1>Writing Portfolio</h1>
-            
-            <h2>Research</h2>
-                    <p><a href="https://drive.google.com/file/d/1DF4rcGtZIbX7JaN7RMLLwa-d3CjP4xSu/view?usp=sharing" target="_blank">Master's thesis, 67 p., 2020</a></p>
-                        <p style="font-size: 10pt;"><em>Each chapter was reviewed and edited my my advisor, Neal Iverson. Content has been revised into the scale of a journal article and is in review.</em></p><br>
-                    <p><a href="https://drive.google.com/file/d/1pxOMfZ84Kouq4hSDqEkzWk6fwQgs8WIu/view?usp=sharing" target="_blank">Undergraduate thesis, 39 p., 2017</a></p>
-                        <p style="font-size: 10pt;"><em>Written largely independently, with review of the final draft from advisors. Received disinction from Carleton College.</em></p><br>
-                    <p><a href="/FieldWork/keckdoc.pdf">Keck short contribution, 7 p., 2017</a></p>
-                        <p style="font-size: 10pt;"><em>An abbreviated version of my undergraduate thesis.</em></p>
-            <h2>Other</h2>
-                <p><a href="https://drive.google.com/file/d/1DJamq7ITX7dxVtBu-lgwLSz-rz-WU8o6/view?usp=sharing" target="_blank">News story about a pumice raft, 2 p., 2019</a></p>
-                    <p style="font-size: 10pt;"><em>This is the first half of a news story written for a science communication class. This was an unpublished excercise.</em></p><br>
-                <p><a href="https://drive.google.com/file/d/1o-0xu7Jrih7y_HMUCY5AZ4HCi-MeSSfm/view?usp=sharing" target="_blank">The Big Moment of a Small Scale Soccer Player, 2 p., 2017</a></p>
-                    <p style="font-size: 10pt;"><em>Written and workshopped in a creative nonfiction writing class. Read a humorous account of a time my kindergarten soccer skills were put to the test.</em></p>
-        </div>
+      body {
+        background-image: url("../photos/flockhill3.jpg");
+      }
+    </style>
+     
+  </head>
+  <div id="nav">
+      <h1><a href="/index.html" class="Anna">Anna C. Thompson</a></h1>
+      <ul class="nav">
+        <li class="nav"><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/Research/index.html" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html">Master's thesis</a>
+            <a href="/Research/keck.html">Undergraduate thesis</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/FieldWork/index.html" class="dropbtn">Fieldwork</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html#fieldwork"
+              >Glacier forefields in the Alps and Rockies</a
+            >
+            <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
+            <a href="/FieldWork/nz.html">New Zealand field school</a>
+            <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
+            <a href="/FieldWork/streams.html"
+              >Stream and wetland restoration projects</a
+            >
+            <a href="/FieldWork/pikas.html">Pika Project</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/Portfolios/index.html" class="dropbtn">Portfolios</a>
+          <div class="dropdown-content">
+            <a href="/Portfolios/artportfolio.html">Visual Art</a>
+            <a href="/Portfolios/writingportfolio.html">Writing</a>
+            <a href="/Portfolios/techportfolio.html">Technical Projects</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/CV.html" class="dropbtn">CV</a>
+          <div class="dropdown-content"></div>
+        </li>
+      </ul>
+      <br />
+  </div>
+  <body>
+    
+<div class="whitebox">
+  <h1>Writing Portfolio</h1>
 
-    </body>
-    <footer>
-   
-        <p>Page created by Anna Thompson.
-            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
-            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
-            </p>
+  <h2>Research</h2>
+  <p>
+    <a
+      href="https://drive.google.com/file/d/1DF4rcGtZIbX7JaN7RMLLwa-d3CjP4xSu/view?usp=sharing"
+      target="_blank"
+      >Master's thesis, 67 p., 2020</a
+    >
+  </p>
+  <p style="font-size: 10pt">
+    <em
+      >Each chapter was reviewed and edited my my advisor, Neal Iverson. Content
+      has been revised into the scale of a journal article and is in review.</em
+    >
+  </p>
+  <br />
+  <p>
+    <a
+      href="https://drive.google.com/file/d/1pxOMfZ84Kouq4hSDqEkzWk6fwQgs8WIu/view?usp=sharing"
+      target="_blank"
+      >Undergraduate thesis, 39 p., 2017</a
+    >
+  </p>
+  <p style="font-size: 10pt">
+    <em
+      >Written largely independently, with review of the final draft from
+      advisors. Received disinction from Carleton College.</em
+    >
+  </p>
+  <br />
+  <p>
+    <a href="https://drive.google.com/file/d/13sApOuxCtiQORB2gid4bfaAzI2dlTN53/view?usp=sharing">Keck short contribution, 7 p., 2017</a>
+  </p>
+  <p style="font-size: 10pt">
+    <em>An abbreviated version of my undergraduate thesis.</em>
+  </p>
+  <h2>Other</h2>
+  <p>
+    <a
+      href="https://drive.google.com/file/d/1DJamq7ITX7dxVtBu-lgwLSz-rz-WU8o6/view?usp=sharing"
+      target="_blank"
+      >News story about a pumice raft, 2 p., 2019</a
+    >
+  </p>
+  <p style="font-size: 10pt">
+    <em
+      >This is the first half of a news story written for a science
+      communication class. This was an unpublished excercise.</em
+    >
+  </p>
+  <br />
+  <p>
+    <a
+      href="https://drive.google.com/file/d/1o-0xu7Jrih7y_HMUCY5AZ4HCi-MeSSfm/view?usp=sharing"
+      target="_blank"
+      >The Big Moment of a Small Scale Soccer Player, 2 p., 2017</a
+    >
+  </p>
+  <p style="font-size: 10pt">
+    <em
+      >Written and workshopped in a creative nonfiction writing class. Read a
+      humorous account of a time my kindergarten soccer skills were put to the
+      test.</em
+    >
+  </p>
+</div>
 
-    </footer>
+  </body>
+  <footer>
+    <p>
+      Page created by Anna Thompson.
+      <a href="mailto:acthompson211@gmail.com" target="_blank"
+        >acthompson211@gmail.com</a
+      >
+      <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
 </html>

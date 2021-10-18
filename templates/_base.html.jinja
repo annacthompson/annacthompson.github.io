@@ -16,13 +16,13 @@
       gtag("config", "UA-179474773-1");
     </script>
     <link rel="stylesheet" href="/style.css" />
-    <title>Anna C. Thompson</title>
+    <title>{% block title %}Anna C. Thompson{% endblock %}</title>
     <style>
       body {
-        background-image: url("../photos/flockhill3.jpg");
+        background-image: url({%block backgroundimg%}"../photos/flockhill3.jpg"{%endblock%});
       }
     </style>
-     
+    {% block more_scripts %} {% endblock %}
   </head>
   <div id="nav">
       <h1><a href="/index.html" class="Anna">Anna C. Thompson</a></h1>
@@ -66,11 +66,9 @@
       <br />
   </div>
   <body>
-    
-<div class="whitebox">
-  <h1>Travel</h1>
-</div>
-
+    {% block content %}
+    <p>No content :O</p>
+    {% endblock %}
   </body>
   <footer>
     <p>
