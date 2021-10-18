@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"></script>
-      <script>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"
+    ></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-179474773-1');
-      </script>
-
-    <link rel="stylesheet" href="../style.css" />       
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-179474773-1");
+    </script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Anna C. Thompson</title>
+    <style>
+      body {
+        background-image: url("../photos/flockhill3.jpg");
+      }
+    </style>
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" /> 
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-
     <!––load external geojson-->
     <script src="https://athomps211.github.io/LA558/final/mapping.json"></script>	  
     <script src="https://athomps211.github.io/LA558/final/fieldtrips.json"></script>
-    <script src="research.json"></script>
+    <script src="/json/FieldWork/research.json"></script>
     <script src="https://athomps211.github.io/LA558/final/school.json"></script>	
-    
-    <title>Anna C. Thompson</title>
-    <style>
-    body {
-      background-image: url('../photos/flockhill3.jpg');
-        }
-    </style>   <!--background image--> 
     <style>
     #map { 
       height: 500px; 
@@ -36,8 +37,6 @@
       margin: 0; 
       padding: 0; 
     }  
-    </style>   <!--map--> 
-    <style>
     .legend i {
         width: 18px;
         height: 20px;
@@ -57,18 +56,51 @@
         color: #777;
     }
     </style>   <!--legend--> 
+
   </head>
-  <nav>
-        <!--Navigation bar-->
-        <div id="nav-placeholder"></div>
-        <script>
-        $(function(){
-          $("#nav-placeholder").load("/nav.html");
-        });
-        </script>
-        <!--end of Navigation bar-->
-    </nav>
+  <div id="nav">
+      <h1><a href="/index.html" class="Anna">Anna C. Thompson</a></h1>
+      <ul class="nav">
+        <li class="nav"><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/Research/index.html" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html">Master's thesis</a>
+            <a href="/Research/keck.html">Undergraduate thesis</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/FieldWork/index.html" class="dropbtn">Fieldwork</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html#fieldwork"
+              >Glacier forefields in the Alps and Rockies</a
+            >
+            <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
+            <a href="/FieldWork/nz.html">New Zealand field school</a>
+            <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
+            <a href="/FieldWork/streams.html"
+              >Stream and wetland restoration projects</a
+            >
+            <a href="/FieldWork/pikas.html">Pika Project</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/Portfolios/index.html" class="dropbtn">Portfolios</a>
+          <div class="dropdown-content">
+            <a href="/Portfolios/artportfolio.html">Visual Art</a>
+            <a href="/Portfolios/writingportfolio.html">Writing</a>
+            <a href="/Portfolios/techportfolio.html">Technical Projects</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/CV.html" class="dropbtn">CV</a>
+          <div class="dropdown-content"></div>
+        </li>
+      </ul>
+      <br />
+  </div>
   <body>
+    
     <div class="whitebox">
             <h1>Fieldwork</h1>
             <p style="margin-left: 0px;"><a href="/Research/MSThesis.html#fieldwork">Glacier forefields</a>, <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>, <a href="/FieldWork/nz.html">New Zealand field school</a>, <a href="/FieldWork/ca.html">San Andreas mapping</a>, <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a><br><br>
@@ -121,7 +153,7 @@
         },
         onEachFeature: function(feature, layer) {
             //Box contents
-            photoURL = "photos/"+ feature.properties.photo+".jpg";
+            photoURL = "/photos/FieldWork/"+ feature.properties.photo+".jpg";
             linkURL = feature.properties.url;
             htmlText1 = "<strong>" + feature.properties.title + "</strong><br>" + feature.properties.caption + "<img src='" + photoURL + "'width='270'><br>" + feature.properties.description
             htmlText2 = htmlText1+"<br>"+"<a href="+linkURL+">details</a>";
@@ -148,7 +180,7 @@
         },
         onEachFeature: function(feature, layer) {
             //Box contents
-            photoURL = "photos/"+ feature.properties.photo+".jpg";
+            photoURL = "/photos/FieldWork/"+ feature.properties.photo+".jpg";
             htmlText = "<strong>" + feature.properties.title + "</strong><br>" + feature.properties.caption + "<img src='" + photoURL + "'width='270'><br>" + feature.properties.description;
             layer.bindPopup(htmlText);
             //hover
@@ -171,7 +203,7 @@
         },
         onEachFeature: function(feature, layer) {
             //Box contents
-            photoURL = "photos/"+ feature.properties.photo+".jpg";
+            photoURL = "/photos/FieldWork/"+ feature.properties.photo+".jpg";
             htmlText = "<strong>" + feature.properties.title + "</strong><br>" + feature.properties.caption + "<img src='" + photoURL + "'width='270'><br>" + feature.properties.description+"<br>"+"<a href="+feature.properties.url+">details</a>";
             layer.bindPopup(htmlText);
             //hover
@@ -194,7 +226,7 @@
         },
         onEachFeature: function(feature, layer) {
             //Box contents
-            photoURL = "photos/"+ feature.properties.photo+".jpg";
+            photoURL = "/photos/FieldWork/"+ feature.properties.photo+".jpg";
             htmlText = "<strong>" + feature.properties.title + "</strong><br>" + feature.properties.caption + "<img src='" + photoURL + "'width='270'><br>"
             layer.bindPopup(htmlText);
             //hover
@@ -223,33 +255,15 @@
     };
     legend.addTo(map);
     </script>  
+
   </body>
-    
   <footer>
-   
-        <p>Page created by Anna Thompson.
-            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
-            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
-            </p>
-
+    <p>
+      Page created by Anna Thompson.
+      <a href="mailto:acthompson211@gmail.com" target="_blank"
+        >acthompson211@gmail.com</a
+      >
+      <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>
+    </p>
   </footer>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

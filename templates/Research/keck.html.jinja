@@ -1,0 +1,255 @@
+{% extends "_base.html.jinja" %} {% block more_scripts %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+{% endblock %} {% block backgroundimg %}'../photos/tuya.jpg'{% endblock %} {%
+block content %}
+<style>
+  #map {
+    height: 400px;
+  }
+</style>
+<div class="whitebox">
+  <h1>
+    Glaciovolcanics in Iceland, Carleton College and Keck Geology Consortium
+  </h1>
+  <p>Advisors: Meagen Pollock, Ben Edwards, Cam Davidson</p>
+
+  <h2>
+    Vesicle Distribution in Glaciovolcanic Pillow Lava from Undirhlíðar,
+    Southwest Iceland
+  </h2>
+
+  <h3>Keck Geology Consortium</h3>
+  <div class="flex">
+    <div class="col2">
+      <div id="map" style="width: 100%"></div>
+      <img
+        src="../photos/keckfig.jpg"
+        style="width: 266px; border-radius: 4px"
+      />
+      <p style="margin-left: 0px">
+        Vesicle positions traced in an example pillow cross section
+      </p>
+    </div>
+    <div>
+      <p>
+        During my senior year at Carleton College, I had the great opportunity
+        to participate in a Keck Geology Consortium project, which is designed
+        to provide research experiences to undergraduate students from the 18
+        participating colleges and universities. I joined a
+        <a
+          href="https://keckgeology.org/2015/12/constraints-on-magma-transport-and-eruption-dynamics-at-a-glaciovolcanic-pillow-ridge-southwest-iceland/"
+          target="_blank"
+          >project</a
+        >
+        lead by Megan Pollock and Ben Edwards that involved two weeks of
+        fieldwork in Iceland, two weeks of labwork at Wooster College,
+        presenting posters at the GSA national fall meeting, completing a thesis
+        in the following year, and finally presenting our final work at the Keck
+        Symposium at Wesleyan University.<br /><br />I studied vesicle
+        distribution in subglacial pillow basalt. My research for Keck was
+        incorporated my research into my senior thesis at Carleton College. My
+        summer fieldwork in Iceland was followed by petrology and geochemistry
+        lab work at the College of Wooster. I used Adobe Illustrator and ImageJ
+        extensively for data processing and preparing figures.
+      </p>
+
+      <h3>Thesis abstract</h3>
+      <p>
+        Pillow lava is the most common lava morphology on Earth. It is found in
+        high abundance in many environments, from the ocean floor to the surface
+        of Mars. Because pillow lava forms during subaqueous eruptions, it is
+        often inaccessible for study. Thus, being able to analyze pillow lava
+        using visible physical characteristics without requiring samples could
+        improve pillow lava research. This paper analyzes the distribution and
+        emplacement mechanisms of vesicles in uniquely accessible pillow lavas
+        found in Undirhlíðar Quarry. These pillows are the only lasting record
+        of a preexisting englacial lake formed during a subglacial eruption, so
+        understanding the details of their vesicles may provide new insights
+        into the timing and nature of their emplacement. I propose that the type
+        of vesicle distribution in a pillow cross section may be used to infer
+        proximity to the source, the rate at which the pillow cooled, and
+        eruption events during pillow emplacement. In this study, I define six
+        types of vesicle distribution in pillow lava based on the presence of a
+        vesiculated core, vesicles in the body, and a hollow pocket. Four pillow
+        types were identified in the field. The observed pillow types all had
+        vesiculated bodies but different cores. I propose that vesiculated cores
+        are the result of rapid pressure changes, that nonvesiculated cores
+        indicate slow cooling and proximity to the source, and that hollow
+        pockets indicate that the source was cut off or diverted. Vesicle rings
+        and cores may be indicative of different events, like magma pulses or
+        sudden changes of pressure of the surrounding environment.
+      </p>
+      <p>
+        <a
+          href="https://drive.google.com/file/d/1pxOMfZ84Kouq4hSDqEkzWk6fwQgs8WIu/view?usp=sharing"
+          target="_blank"
+          >access full thesis here</a
+        >
+      </p>
+      <p>
+        <a href="../FieldWork/keckdoc.pdf" target="_blank"
+          >access Keck short contribution here</a
+        >
+      </p>
+    </div>
+  </div>
+  <h3>Related presentations</h3>
+  <p>
+    Thompson, A. C., Orden, M., Lembo, C., Wallace, C., Kumpf, B., Heineman, R.,
+    Engen, C., Edwards, B. R., Pollock, M., and Kochtitzky, W., Physical
+    Characteristics of Glaciovolcanic Pillow Lavas from Undirhlidar, SW Iceland.
+    Poster session presented at: Geological Society of America; 2016 Sept 26;
+    Denver, CO.
+    <a
+      href="https://gsa.confex.com/gsa/2016AM/meetingapp.cgi/Paper/286574"
+      target="_blank"
+      >abstract</a
+    >
+  </p>
+  <br />
+  <p>
+    Wallace, C., Kumpf, B., Heineman, R., Lembo, C., Orden, M., Thompson, A. C.;
+    Engen, C., Kochtitzky, W., Pollock, M., Edwards., B. R., and Hiatt, A.
+    Geochemical Constraints on the Magmatic System and Eruptive Environment of a
+    Glaciovolcanic Tindar Ridge from Undirhlíðar, SW Iceland. Poster session
+    presented at: Geological Society of America; 2016 Sept 26; Denver, CO.
+    <a
+      href="https://gsa.confex.com/gsa/2016AM/meetingapp.cgi/Paper/286588"
+      target="_blank"
+      >abstract</a
+    >
+  </p>
+  <br />
+  <p>
+    Heineman, R., Lembo, C., Engen, C., Kochtitzky, W., Wallace, C., Orden, M.,
+    Thompson, A. C., Kumpf, B., Edwards, B. R., and Pollock, M. New Insights on
+    the Formation of Glaciovolcanic Tindar Ridges from Detailed mapping of
+    Undirhlidar Ridge, SW Iceland. Poster session presented at: Geological
+    Society of America; 2016 Sept 26; Denver, CO.
+    <a
+      href="https://gsa.confex.com/gsa/2016AM/meetingapp.cgi/Paper/286590"
+      target="_blank"
+      >abstract</a
+    >
+  </p>
+
+  <h3>Related blog posts</h3>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2017/05/11/the-30th-annual-keck-symposium-and-the-importance-of-presentation-in-the-undergraduate-research-experience/"
+      target="_blank"
+      >Wooster Geologists: The 30th Annual Keck Symposium and the Importance of
+      Presentation in the Undergraduate Research Experience 5/11/17</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/25/keck-gsa-abstracts/"
+      target="_blank"
+      >Wooster Geologists: How thick was the ice? 11/8/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/25/keck-gsa-abstracts/"
+      target="_blank"
+      >Wooster Geologists: Keck GSA Abstracts 7/25/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/01/an-experience-and-an-upset/"
+      target="_blank"
+      >Wooster Geologists: An Experience and an Upset 7/1/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/04/keck-students-doing-rock-hard-research/"
+      target="_blank"
+      >Wooster Geologists: Keck Students Doing Rock Hard Research 7/4/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/03/the-sulfur-saga/"
+      target="_blank"
+      >Wooster Geologists: The Sulfer Saga 7/3/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/02/a-journey-to-the-land-of-basalt/"
+      target="_blank"
+      >Wooster Geologists: A Journey to the Land of Basalt 7/2/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/07/18/keck-iceland-takes-over-the-wooster-lab//"
+      target="_blank"
+      >Wooster Geologists: Keck Iceland takes over the Wooster Lab 6/18/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/06/26/pillows-trolls-and-dried-fish/"
+      target="_blank"
+      >Wooster Geologists: Pillows, Trolls, and Dried Fish 6/26/16</a
+    >
+  </p>
+
+  <p>
+    <a
+      href="https://woostergeologists.scotblogs.wooster.edu/2016/06/21/keck-2016-arrives-in-iceland/"
+      target="_blank"
+      >Wooster Geologists: Keck 2016 Arrives in Iceland 6/21/16</a
+    >
+  </p>
+</div>
+
+<img src="../photos/iceland.jpg" style="width: 49%" />
+<img src="../photos/pillows.jpg" style="width: 49%" /><br />
+<img src="../photos/moss.jpg" style="width: 49%" />
+<img src="../photos/tents.jpg" style="width: 49%" /><br />
+<img src="../photos/columns.jpg" style="width: 49%" />
+<img src="../photos/tuya.jpg" style="width: 49%" />
+
+<script>
+  //Base Layers
+  var Esri_WorldImagery = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+      attribution:
+        "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+    }
+  );
+  //the map
+  var map = L.map("map", {
+    center: new L.LatLng(64.55998287916448, -21.658000946044922),
+    zoom: 6,
+    layers: [Esri_WorldImagery],
+  });
+
+  L.marker([64.5516397783742, -21.66628360748291], {
+    title: "Undirhlíðar Quarry",
+    opacity: 1,
+  })
+    .addTo(map)
+    .bindTooltip("Undirhlíðar Quarry");
+</script>
+<!--map-->
+{% endblock %}

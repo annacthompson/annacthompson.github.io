@@ -1,51 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-179474773-1');
-        </script>
-
-    <link rel="stylesheet" href="../style.css" /> 
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
-
+  <head>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-179474773-1");
+    </script>
+    <link rel="stylesheet" href="/style.css" />
     <title>Anna C. Thompson</title>
     <style>
-    body {
-      background-image: url('../photos/flockhill3.jpg');
-        }
-    </style>        
-    </head>
-    <nav>
-        <!--Navigation bar-->
-        <div id="nav-placeholder"></div>
-        <script>
-        $(function(){
-          $("#nav-placeholder").load("/nav.html");
-        });
-        </script>
-        <!--end of Navigation bar-->
-    </nav>
-    <body>
-        <div class="whitebox">
-            <h1>Portfolios</h1>
-            <a href="artportfolio.html"><h2>Visual Art</h2></a>
-            <a href="writingprotfolio.html"><h2>Writing</h2></a>
-            <a href="techportfolio.html"><h2>Technical Projects</h2></a>
-        </div>
+      body {
+        background-image: url("../photos/flockhill3.jpg");
+      }
+    </style>
+     
+  </head>
+  <div id="nav">
+      <h1><a href="/index.html" class="Anna">Anna C. Thompson</a></h1>
+      <ul class="nav">
+        <li class="nav"><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/Research/index.html" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html">Master's thesis</a>
+            <a href="/Research/keck.html">Undergraduate thesis</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/FieldWork/index.html" class="dropbtn">Fieldwork</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html#fieldwork"
+              >Glacier forefields in the Alps and Rockies</a
+            >
+            <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
+            <a href="/FieldWork/nz.html">New Zealand field school</a>
+            <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
+            <a href="/FieldWork/streams.html"
+              >Stream and wetland restoration projects</a
+            >
+            <a href="/FieldWork/pikas.html">Pika Project</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/Portfolios/index.html" class="dropbtn">Portfolios</a>
+          <div class="dropdown-content">
+            <a href="/Portfolios/artportfolio.html">Visual Art</a>
+            <a href="/Portfolios/writingportfolio.html">Writing</a>
+            <a href="/Portfolios/techportfolio.html">Technical Projects</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/CV.html" class="dropbtn">CV</a>
+          <div class="dropdown-content"></div>
+        </li>
+      </ul>
+      <br />
+  </div>
+  <body>
+    
+<div class="whitebox">
+  <h1>Portfolios</h1>
+  <a href="artportfolio.html"><h2>Visual Art</h2></a>
+  <a href="writingprotfolio.html"><h2>Writing</h2></a>
+  <a href="techportfolio.html"><h2>Technical Projects</h2></a>
+</div>
 
-    </body>
-    <footer>
-   
-        <p>Page created by Anna Thompson.
-            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
-            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
-            </p>
-
-    </footer>
+  </body>
+  <footer>
+    <p>
+      Page created by Anna Thompson.
+      <a href="mailto:acthompson211@gmail.com" target="_blank"
+        >acthompson211@gmail.com</a
+      >
+      <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
 </html>

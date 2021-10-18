@@ -1,90 +1,141 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"></script>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-179474773-1');
-    </script>   
-     
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-179474773-1");
+    </script>
+    <link rel="stylesheet" href="/style.css" />
     <title>Anna C. Thompson</title>
-      
     <style>
-    body {
-      background-image: url('../photos/saf1.jpg');
-        }
-    </style>   <!--background image--> 
-    <style>
-          #map {
-            height: 480px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-          }
-</style>   <!--map--> 
-      
-    <link rel="stylesheet" href="../style.css" /> 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
+      body {
+        background-image: url('/photos/saf1.jpg');
+      }
+    </style>
+    
+<style>
+  #map {
+    height: 480px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<!--map-->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
 
   </head>
-  <nav>
-        <!--Navigation bar-->
-        <div id="nav-placeholder"></div>
-        <script>
-        $(function(){
-          $("#nav-placeholder").load("/nav.html");
-        });
-        </script>
-        <!--end of Navigation bar-->
-    </nav>
+  <div id="nav">
+      <h1><a href="/index.html" class="Anna">Anna C. Thompson</a></h1>
+      <ul class="nav">
+        <li class="nav"><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/Research/index.html" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html">Master's thesis</a>
+            <a href="/Research/keck.html">Undergraduate thesis</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/FieldWork/index.html" class="dropbtn">Fieldwork</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html#fieldwork"
+              >Glacier forefields in the Alps and Rockies</a
+            >
+            <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
+            <a href="/FieldWork/nz.html">New Zealand field school</a>
+            <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
+            <a href="/FieldWork/streams.html"
+              >Stream and wetland restoration projects</a
+            >
+            <a href="/FieldWork/pikas.html">Pika Project</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/Portfolios/index.html" class="dropbtn">Portfolios</a>
+          <div class="dropdown-content">
+            <a href="/Portfolios/artportfolio.html">Visual Art</a>
+            <a href="/Portfolios/writingportfolio.html">Writing</a>
+            <a href="/Portfolios/techportfolio.html">Technical Projects</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/CV.html" class="dropbtn">CV</a>
+          <div class="dropdown-content"></div>
+        </li>
+      </ul>
+      <br />
+  </div>
   <body>
-    <div class="whitebox">
-    <h1>San Andreas Fault Mapping Project, 2017</h1>
-        <h2>Painted Canyon, CA</h2>
-        <p style="margin-left: 0px;">As an exercise in Carleton College's structural geology class taught by Sarah Titus, we spent a weekend mapping a portion of the San Andreas Fault in Painted Canyon in Southern California. The class worked in small groups of three, each of which was responsible for identifying contacts, faults, and folds in our assigned mapping area.</p><br>
-        <div id="map"></div>
-        <br>
-        <img src="photos/saf2.jpg" style="width:52.5%">                        
-        <img src="photos/CAfold.jpg" style="width:46.8%;">
-      </div>
-      
-
+    
+<div class="whitebox">
+  <h1>San Andreas Fault Mapping Project, 2017</h1>
+  <h2>Painted Canyon, CA</h2>
+  <p style="margin-left: 0px">
+    As an exercise in Carleton College's structural geology class taught by
+    Sarah Titus, we spent a weekend mapping a portion of the San Andreas Fault
+    in Painted Canyon in Southern California. The class worked in small groups
+    of three, each of which was responsible for identifying contacts, faults,
+    and folds in our assigned mapping area.
+  </p>
+  <br />
+  <div id="map"></div>
+  <br />
+  <img src="photos/saf2.jpg" style="width: 52.5%" />
+  <img src="photos/CAfold.jpg" style="width: 46.8%" />
+</div>
 <script>
-      //Base Layers
-      var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-});
-      //the map
-      var map = L.map('map', {
-        center: new L.LatLng(33.61369007226048, -116.00472450256348),
-        zoom: 13,
-        layers: [Esri_WorldImagery]
-      });
-    
-    // create a rectangle
-    L.rectangle( [[33.608, -116.018], [33.617, -115.997]], {
-     color: 'blue', //the outline color
-	fillColor: 'none',
-     weight: 1
-    }).addTo(map);
+  //Base Layers
+  var Esri_WorldImagery = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+      attribution:
+        "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+    }
+  );
+  //the map
+  var map = L.map("map", {
+    center: new L.LatLng(33.61369007226048, -116.00472450256348),
+    zoom: 13,
+    layers: [Esri_WorldImagery],
+  });
+
+  // create a rectangle
+  L.rectangle(
+    [
+      [33.608, -116.018],
+      [33.617, -115.997],
+    ],
+    {
+      color: "blue", //the outline color
+      fillColor: "none",
+      weight: 1,
+    }
+  ).addTo(map);
 </script>
-    
-</body>
-    
+
+  </body>
   <footer>
-   
-        <p>Page created by Anna Thompson.
-            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
-            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
-            </p>
-
+    <p>
+      Page created by Anna Thompson.
+      <a href="mailto:acthompson211@gmail.com" target="_blank"
+        >acthompson211@gmail.com</a
+      >
+      <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>
+    </p>
   </footer>
-    
 </html>
-

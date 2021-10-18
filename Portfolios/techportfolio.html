@@ -1,317 +1,500 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"></script>
-      <script>
+  <head>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179474773-1"
+    ></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-179474773-1');
-      </script>
-
-    <link rel="stylesheet" href="../style.css" /> 
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  	  
-
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-179474773-1");
+    </script>
+    <link rel="stylesheet" href="/style.css" />
     <title>Anna C. Thompson</title>
     <style>
-    body {
-      background-image: url('../photos/flockhill3.jpg');
-        }
-    .ring:hover {
-        background: url("/Portfolios/portfolioitems/illustrator/oldringshear.jpg") no-repeat;
-        content: url("/Portfolios/portfolioitems/illustrator/oldringshear.jpg");
-        }
-    * {
-      box-sizing: border-box;
-    }
+      body {
+        background-image: url("../photos/flockhill3.jpg");
+      }
+    </style>
+    
+<style>
+  .ring:hover {
+    background: url("/photos/Portfolios/illustrator/oldringshear.jpg")
+      no-repeat;
+    content: url("/photos/Portfolios/illustrator/oldringshear.jpg");
+  }
+  * {
+    box-sizing: border-box;
+  }
 
-    .row > .column {
-      padding: 0 8px;
-    }
+  .row > .column {
+    padding: 0 8px;
+  }
 
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 4vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
 
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      padding-top: 4vh;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: black;
-    }
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: black;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
 
-    /* Modal Content */
-    .modal-content {
-      position: relative;
-      background-color: black;
-      margin: auto;
-      padding: 0;
-      width: 90%;
-      max-width: 1200px;
-    }
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
 
-    /* The Close Button */
-    .close {
-      color: white;
-      position: absolute;
-      top: 10px;
-      right: 25px;
-      font-size: 35px;
-      font-weight: bold;
-    }
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-    .close:hover,
-    .close:focus {
-      color: #999;
-      text-decoration: none;
-      cursor: pointer;
-    }
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
 
-    .mySlides {
-      display: none;
-      text-align: center;
-    }
+  .cursor {
+    cursor: pointer;
+  }
 
-    .cursor {
-      cursor: pointer;
-    }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
 
-    /* Next & previous buttons */
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -50px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      -webkit-user-select: none;
-    }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
 
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
 
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
+  img {
+    margin-bottom: 3vh;
+  }
 
-    img {
-      margin-bottom: 3vh;
-    }
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
 
-    .caption-container {
-      text-align: center;
-      background-color: black;
-      padding: 2px 16px;
-      color: white;
-    }
+  .demo {
+    opacity: 0.6;
+  }
 
-    .demo {
-      opacity: 0.6;
-    }
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
 
-    .active,
-    .demo:hover {
-      opacity: 1;
-    }
+  img.hover-shadow {
+    transition: 0s;
+  }
 
-    img.hover-shadow {
-      transition: 0s;
-      
-    }
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+</style>
 
-    .hover-shadow:hover {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-        
-    </style>        
-    </head>
-    <nav>
-        <!--Navigation bar-->
-        <div id="nav-placeholder"></div>
-        <script>
-        $(function(){
-          $("#nav-placeholder").load("/nav.html");
-        });
-        </script>
-        <!--end of Navigation bar-->
-    </nav>
-    <body>
-        <div class="whitebox">
-            <h1>Technical Projects</h1>
-            
-            <p style="margin-left: 0px"><a href="#ill">Adobe Illustrator</a>, <a href="#gis">ArcGIS</a>, <a href="#web">Web Design</a></p>
-            
-            <h2 id="ill">Adobe Illustrator</h2>
-                <h3>Scientific Figures</h3>
-                <p>I have made many types of figures in Illustrator for reports and research papers. These are just some examples.</p>
-                <p>
-                These figures are from my undergraduate thesis. They were created to display and analyze vesicle distribution in this pillow basalt. I traced vesicles (air bubbles) in two "wedges" in the left-hand image and imported the traces into image-J to analyze vesicle shape. The figure on the right illustrates how vesicle geometry varies from the inside to the outside of the pillow in one of the wedges.</p><br>
-                <p style="text-align: center"><img src="/photos/keckfig.jpg" style="width:44.8vw">
-                <img src="/Portfolios/portfolioitems/illustrator/PUN1102graphfig.png" style="width:18vw"></p><br>
-                
-                <p>This figure is from a report in my seds/strat class. As part of a team of three, I created and interpreted four strat columns from outcrops of the Decorah Shale/Limestone.</p><br>
-                <p style="text-align: center"><img src="/Portfolios/portfolioitems/illustrator/strat.jpg" style="width:60vw"><br>
-                </p>
-                <p>Instead of creating this next figure from scratch, I had to modify an existing flat jpeg to my needs. <em>Hover to view the original.</em> The entire cutout view of the ice, rock, and toothed platen is the my addition (on both scales). I also covered and replaced all the lables. </p><br>
-                <p style="text-align: center"><img src="/Portfolios/portfolioitems/illustrator/newringshear.jpg" style="width:60vw" class="ring"><br>
-                </p>
-            
-                <h3>T-shirts</h3>
-                <p>Sketches &#8594; Illustrator files (after many rounds of consulting and manipulation)  &#8594; Prints</p><br>
-            
-                <div class="row">
-                <p><img src="portfolioitems/illustrator/sketch.jpg" style="width:16.3vw" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                <img src="portfolioitems/illustrator/Geotshirt.jpg" style="width:25vw" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-                <img src="portfolioitems/illustrator/Maroon.png" style="width:22.5vw" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></p>
-                <br>
-                <p><img src="portfolioitems/illustrator/bpsketch.jpg" style="width:25vw" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-                <img src="portfolioitems/illustrator/bptshirt.jpg" style="width:23.5vw" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-                <img src="portfolioitems/illustrator/bpprint.jpg" style="width:18.2vw" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></p></div>
-                
-                <div>
-                <div id="myModal" class="modal">
-                    <span class="close cursor" onclick="closeModal()">&times;</span>
-                <div class="modal-content">
+  </head>
+  <div id="nav">
+      <h1><a href="/index.html" class="Anna">Anna C. Thompson</a></h1>
+      <ul class="nav">
+        <li class="nav"><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="/Research/index.html" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html">Master's thesis</a>
+            <a href="/Research/keck.html">Undergraduate thesis</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/FieldWork/index.html" class="dropbtn">Fieldwork</a>
+          <div class="dropdown-content">
+            <a href="/Research/MSThesis.html#fieldwork"
+              >Glacier forefields in the Alps and Rockies</a
+            >
+            <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>
+            <a href="/FieldWork/nz.html">New Zealand field school</a>
+            <a href="/FieldWork/ca.html">San Andreas Fault mapping project</a>
+            <a href="/FieldWork/streams.html"
+              >Stream and wetland restoration projects</a
+            >
+            <a href="/FieldWork/pikas.html">Pika Project</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/Portfolios/index.html" class="dropbtn">Portfolios</a>
+          <div class="dropdown-content">
+            <a href="/Portfolios/artportfolio.html">Visual Art</a>
+            <a href="/Portfolios/writingportfolio.html">Writing</a>
+            <a href="/Portfolios/techportfolio.html">Technical Projects</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/CV.html" class="dropbtn">CV</a>
+          <div class="dropdown-content"></div>
+        </li>
+      </ul>
+      <br />
+  </div>
+  <body>
+    
+<div class="whitebox">
+  <h1>Technical Projects</h1>
 
-                <!--big pic--> 
-                <div class="mySlides">
-                  <div class="numbertext">1 / 6</div>
-                  <img src="portfolioitems/illustrator/sketch.jpg" style="width:auto; max-height: 80vh; max-width: 80vw;">
-                </div>
+  <p style="margin-left: 0px">
+    <a href="#ill">Adobe Illustrator</a>, <a href="#gis">ArcGIS</a>,
+    <a href="#web">Web Design</a>
+  </p>
 
-                <div class="mySlides">
-                  <div class="numbertext">2 / 6</div>
-                  <img src="portfolioitems/illustrator/Geotshirt.jpg" style="width:auto; max-height: 80vh; max-width: 80vw;">
-                </div>
-                  
-                <div class="mySlides">
-                  <div class="numbertext">3 / 6</div>
-                  <img src="portfolioitems/illustrator/Maroon.png" style="width:auto; max-height: 80vh; max-width: 80vw;">
-                </div>
+  <h2 id="ill">Adobe Illustrator</h2>
+  <h3>Scientific Figures</h3>
+  <p>
+    I have made many types of figures in Illustrator for reports and research
+    papers. These are just some examples.
+  </p>
+  <p>
+    These figures are from my undergraduate thesis. They were created to display
+    and analyze vesicle distribution in this pillow basalt. I traced vesicles
+    (air bubbles) in two "wedges" in the left-hand image and imported the traces
+    into image-J to analyze vesicle shape. The figure on the right illustrates
+    how vesicle geometry varies from the inside to the outside of the pillow in
+    one of the wedges.
+  </p>
+  <br />
+  <p style="text-align: center">
+    <img src="/photos/keckfig.jpg" style="width: 44.8vw" />
+    <img
+      src="/photos/Portfolios/illustrator/PUN1102graphfig.png"
+      style="width: 18vw"
+    />
+  </p>
+  <br />
 
-                <div class="mySlides">
-                  <div class="numbertext">4 / 6</div>
-                  <img src="portfolioitems/illustrator/bpsketch.jpg" style="width:auto; max-height: 80vh; max-width: 80vw;">
-                </div>
+  <p>
+    This figure is from a report in my seds/strat class. As part of a team of
+    three, I created and interpreted four strat columns from outcrops of the
+    Decorah Shale/Limestone.
+  </p>
+  <br />
+  <p style="text-align: center">
+    <img
+      src="/photos/Portfolios/illustrator/strat.jpg"
+      style="width: 60vw"
+    /><br />
+  </p>
+  <p>
+    Instead of creating this next figure from scratch, I had to modify an
+    existing flat jpeg to my needs. <em>Hover to view the original.</em> The
+    entire cutout view of the ice, rock, and toothed platen is the my addition
+    (on both scales). I also covered and replaced all the lables.
+  </p>
+  <br />
+  <p style="text-align: center">
+    <img
+      src="/photos/Portfolios/illustrator/newringshear.jpg"
+      style="width: 60vw"
+      class="ring"
+    /><br />
+  </p>
 
-                <div class="mySlides">
-                  <div class="numbertext">5 / 6</div>
-                  <img src="portfolioitems/illustrator/bptshirt.jpg" style="width:auto; max-height: 80vh; max-width: 80vw;">
-                </div>
-                  
-                <div class="mySlides">
-                  <div class="numbertext">6 / 6</div>
-                  <img src="portfolioitems/illustrator/bpprint.jpg" style="width:auto; max-height: 80vh; max-width: 80vw;">
-                </div>
+  <h3>T-shirts</h3>
+  <p>
+    Sketches &#8594; Illustrator files (after many rounds of consulting and
+    manipulation) &#8594; Prints
+  </p>
+  <br />
 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <div class="row">
+    <p>
+      <img
+        src="/photos/Portfolios/illustrator/sketch.jpg"
+        style="width: 16.3vw"
+        onclick="openModal();currentSlide(1)"
+        class="hover-shadow cursor"
+      />
+      <img
+        src="/photos/Portfolios/illustrator/Geotshirt.jpg"
+        style="width: 25vw"
+        onclick="openModal();currentSlide(2)"
+        class="hover-shadow cursor"
+      />
+      <img
+        src="/photos/Portfolios/illustrator/Maroon.png"
+        style="width: 22.5vw"
+        onclick="openModal();currentSlide(3)"
+        class="hover-shadow cursor"
+      />
+    </p>
+    <br />
+    <p>
+      <img
+        src="/photos/Portfolios/illustrator/bpsketch.jpg"
+        style="width: 25vw"
+        onclick="openModal();currentSlide(4)"
+        class="hover-shadow cursor"
+      />
+      <img
+        src="/photos/Portfolios/illustrator/bptshirt.jpg"
+        style="width: 23.5vw"
+        onclick="openModal();currentSlide(5)"
+        class="hover-shadow cursor"
+      />
+      <img
+        src="/photos/Portfolios/illustrator/bpprint.jpg"
+        style="width: 18.2vw"
+        onclick="openModal();currentSlide(6)"
+        class="hover-shadow cursor"
+      />
+    </p>
+  </div>
 
-                <div class="caption-container">
-                  <p id="caption"></p>
-                </div>
-                    
-                <!--thumbnail--> 
-                  <img class="demo cursor" src="portfolioitems/illustrator/sketch.jpg" style="width: auto; height: 10vh" onclick="currentSlide(1)" alt="Sketch">
-                  <img class="demo cursor" src="portfolioitems/illustrator/Geotshirt.jpg" style="width: auto; height: 10vh" onclick="currentSlide(2)" alt="Illustrator file">
-                  <img class="demo cursor" src="portfolioitems/illustrator/Maroon.png" style="width: auto; height: 10vh" onclick="currentSlide(3)" alt="Final print">
-                  <img class="demo cursor" src="portfolioitems/illustrator/bpsketch.jpg" style="width: auto; height: 10vh" onclick="currentSlide(4)" alt="Sketch">
-                  <img class="demo cursor" src="portfolioitems/illustrator/bptshirt.jpg" style="width: auto; height: 10vh" onclick="currentSlide(5)" alt="Illustrator file">
-                  <img class="demo cursor" src="portfolioitems/illustrator/bpprint.jpg" style="width: auto; height: 10vh" onclick="currentSlide(6)" alt="Final print">
-                </div>
-                <br>
-            </div>   
-            </div>    <!--modal-->
-            
-            <h2 id="gis">ArcGIS</h2>
-                <p><img src="portfolioitems/GIS.jpg" style="width: 40vw"></p>
-            <h2 id="web">Web Design</h2>
-                <h3>html css and JavaScript</h3>
-                <p>See this website as an example!</p>
-                <h3>Embedding maps</h3>
-                <p>See a good example of a customized embedded map on my fieldwork home page. <br>
-                <a href="https://drive.google.com/file/d/17l4rDA1QWuMAS8RdLx-Wozagqm_3_1D6/view?usp=sharing"  target="_blank">View an overview of how the maps on this website were created</a>
-                <br>
-                <a href="https://athomps211.github.io/LA558/" target="_blank">Additional web mapping assignments and exercises</a></p>
+  <div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <!--big pic-->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img
+            src="/photos/Portfolios/illustrator/sketch.jpg"
+            style="width: auto; max-height: 80vh; max-width: 80vw"
+          />
         </div>
-    <script>
-        function openModal() {
-          document.getElementById("myModal").style.display = "block";
-        }
 
-        function closeModal() {
-          document.getElementById("myModal").style.display = "none";
-        }
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img
+            src="/photos/Portfolios/illustrator/Geotshirt.jpg"
+            style="width: auto; max-height: 80vh; max-width: 80vw"
+          />
+        </div>
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img
+            src="/photos/Portfolios/illustrator/Maroon.png"
+            style="width: auto; max-height: 80vh; max-width: 80vw"
+          />
+        </div>
 
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img
+            src="/photos/Portfolios/illustrator/bpsketch.jpg"
+            style="width: auto; max-height: 80vh; max-width: 80vw"
+          />
+        </div>
 
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img
+            src="/photos/Portfolios/illustrator/bptshirt.jpg"
+            style="width: auto; max-height: 80vh; max-width: 80vw"
+          />
+        </div>
 
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("demo");
-          var captionText = document.getElementById("caption");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-          captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-    </script>     
-    </body>
-    <footer>
-   
-        <p>Page created by Anna Thompson.
-            <a href="mailto:acthompson211@gmail.com" target="_blank">acthompson211@gmail.com</a>
-            <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>        
-            </p>
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img
+            src="/photos/Portfolios/illustrator/bpprint.jpg"
+            style="width: auto; max-height: 80vh; max-width: 80vw"
+          />
+        </div>
 
-    </footer>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!--thumbnail-->
+        <img
+          class="demo cursor"
+          src="/photos/Portfolios/illustrator/sketch.jpg"
+          style="width: auto; height: 10vh"
+          onclick="currentSlide(1)"
+          alt="Sketch"
+        />
+        <img
+          class="demo cursor"
+          src="/photos/Portfolios/illustrator/Geotshirt.jpg"
+          style="width: auto; height: 10vh"
+          onclick="currentSlide(2)"
+          alt="Illustrator file"
+        />
+        <img
+          class="demo cursor"
+          src="/photos/Portfolios/illustrator/Maroon.png"
+          style="width: auto; height: 10vh"
+          onclick="currentSlide(3)"
+          alt="Final print"
+        />
+        <img
+          class="demo cursor"
+          src="/photos/Portfolios/illustrator/bpsketch.jpg"
+          style="width: auto; height: 10vh"
+          onclick="currentSlide(4)"
+          alt="Sketch"
+        />
+        <img
+          class="demo cursor"
+          src="/photos/Portfolios/illustrator/bptshirt.jpg"
+          style="width: auto; height: 10vh"
+          onclick="currentSlide(5)"
+          alt="Illustrator file"
+        />
+        <img
+          class="demo cursor"
+          src="/photos/Portfolios/illustrator/bpprint.jpg"
+          style="width: auto; height: 10vh"
+          onclick="currentSlide(6)"
+          alt="Final print"
+        />
+      </div>
+      <br />
+    </div>
+  </div>
+  <!--modal-->
+
+  <h2 id="gis">ArcGIS</h2>
+  <p><img src="/photos/Portfolios/GIS.jpg" style="width: 40vw" /></p>
+  <h2 id="web">Web Design</h2>
+  <h3>html css and JavaScript</h3>
+  <p>See this website as an example!</p>
+  <h3>Embedding maps</h3>
+  <p>
+    See a good example of a customized embedded map on my fieldwork home page.
+    <br />
+    <a
+      href="https://drive.google.com/file/d/17l4rDA1QWuMAS8RdLx-Wozagqm_3_1D6/view?usp=sharing"
+      target="_blank"
+      >View an overview of how the maps on this website were created</a
+    >
+    <br />
+    <a href="https://athomps211.github.io/LA558/" target="_blank"
+      >Additional web mapping assignments and exercises</a
+    >
+  </p>
+</div>
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+  }
+</script>
+
+  </body>
+  <footer>
+    <p>
+      Page created by Anna Thompson.
+      <a href="mailto:acthompson211@gmail.com" target="_blank"
+        >acthompson211@gmail.com</a
+      >
+      <a href="www.linkedin.com/in/acthompson211" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
 </html>

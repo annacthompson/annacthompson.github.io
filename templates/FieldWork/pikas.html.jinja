@@ -1,0 +1,81 @@
+{% extends "_base.html.jinja" %} {% block more_scripts %}
+<style>
+  .pika:hover {
+    background: url("/photos/pika2eep.jpg") no-repeat;
+    content: url("/photos/pika2eep.jpg");
+  }
+</style>
+{% endblock %} {% block backgroundimg %}'/photos/talus2.jpg'{%endblock%}
+{%block content %}
+<div class="whitebox">
+  <h1>Pika Project</h1>
+  <div class="flex">
+    <div class="col2">
+      <img
+        src="/photos/pika2.jpg"
+        style="width: 30vw; border-radius: 4px"
+        class="pika"
+      />
+      <img src="/photos/pika.jpg" style="width: 30vw; border-radius: 4px" />
+      <!--<img src="../photos/pika3.jpg" style="width:30vw;border-radius: 4px">-->
+    </div>
+    <div>
+      <p style="margin-left: 0px">
+        Pikas are small mammals related to rabbits that live in alpine
+        environments. They are extremely sensitive to high temperature, and
+        therefore are not well served by temperature increases related to
+        climate change. To study this effect, Dr. Chris Ray began monitoring
+        pikas at Emerald Lake in the Gallatin Mountains (one of many pika
+        surveys) in 1998. April Craighead and the Craighead Institute later
+        became involved and expanded the project.
+      </p>
+      <br />
+      <p style="margin-left: 0px">
+        Beginning as early as high school, I had the opportunity to assist
+        <a
+          href="https://instaar.colorado.edu/people/print/8222/"
+          target="_blank"
+          >Chris Ray</a
+        >
+        and April Craighead with three annual pika surveys (2012, 2014, 2016) in
+        a canyon outside of Bozeman, MT. I can't imagine a better introduction
+        to scientific fieldwork, and I will always carry a soft spot for
+        pikas.<br /><br />
+      </p>
+
+      <h3>Behavioral surveys</h3>
+      <p>
+        The best job ever! I would post myself in view of an assigned haypile
+        and look for the pika to confirm its survival from the previous year.
+        Once I could identify a pika, I would log its activity for 45 minutes.
+      </p>
+
+      <h3>Vegetation and habitat surveys</h3>
+      <p>
+        I assisted April, who was recreating historic vegetation surveys on the
+        talus slopes. We also conducted a few habitat surveys, in which we
+        analysed the size and distribution of rocks and rock cover to determine
+        its suitability for pikas.
+      </p>
+
+      <h3>Pika trapping, handling, and sample collection</h3>
+      <p>
+        We set and checked live traps, which requires a lot of care to keep the
+        pikas safe. When we would find a pika in a trap, I assisted Chris to
+        swiftly take samples of blood, mites, fleas, feces, urine, hair, and
+        tissue. We also logged temperature, weight, and location of the trap. We
+        put a pit tag in the scruff of the neck, and tagged its ears with a
+        unique color permutation before release.
+      </p>
+      <br />
+      <p style="margin-left: 0px">
+        <br />Read more about the Pika project at the
+        <a href="http://www.craigheadresearch.org/pika.html" target="_blank"
+          >Craighead Institute's website!</a
+        >
+      </p>
+      <br /><br />
+    </div>
+  </div>
+</div>
+{%endblock%}

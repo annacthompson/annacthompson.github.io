@@ -1,0 +1,612 @@
+{% extends "_base.html.jinja" %} {% block more_scripts %}
+<style>
+  img {
+    border-radius: 4px;
+    margin-bottom: 0px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  .mySlides {
+    display: none;
+  }
+  .mySlides2 {
+    display: none;
+  }
+  .mySlides3 {
+    display: none;
+  }
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .dot2 {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .dot3 {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active {
+    background-color: #820802;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+{% endblock %} {% block backgroundimg %}'../photos/glaciermargin.JPG'{% endblock%} {%block content %}
+<div class="whitebox">
+  <h1>Graduate work at Iowa State University</h1>
+  <p style="margin-left: 0px">
+    <a href="#sliding">Glacier Sliding</a>,
+    <a href="#exp">Glacier Sliding Experiments</a>,
+    <a href="#fieldwork">Fieldwork at Glacier Forefields</a>,
+    <a href="#fieldtrip">Fieldtrip in Switzerland</a>
+  </p>
+  <br />
+  <p style="margin-left: 0px">Advisor: Dr. Neal Iverson</p>
+
+  <h2 id="sliding">Glacier Sliding</h2>
+  <div class="flex">
+    <div class="col2">
+      <div class="slideshow-container" style="width: 40vw">
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier1.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier2.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier3.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier4.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier5.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier6.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/photos/Cartoon/glacier7.jpg" style="width: 100%" />
+        </div>
+      </div>
+      <div style="text-align: center; margin-bottom: 10px">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <br />
+    </div>
+    <div>
+      <p>
+        Glaciers move under their own weight, either by deforming or sliding.
+        Seasonal advance and retreat is natural, but most modern glaciers have
+        fallen out of equilibrium so that they are retreating more than they are
+        advancing.
+      </p>
+      <br />
+      <p>
+        Accelerated glacier sliding makes glaciers more vulnerable because ice
+        moves more quickly to lower (warmer) elevations where it melts faster,
+        or because it is delivered more quickly to the ocean where ice breaks
+        off as ice bergs. It also increases weathering rates, which not only
+        control landscape evolution, but also carbon flux.
+      </p>
+      <br />
+      <p>
+        Shrinking glaciers are concerning because they are an important source
+        of drinking water, irrigation, and power to many communities, and the
+        meltwater and ice bergs contribute to sea-level rise.
+      </p>
+      <br />
+      <p style="font-size: 10pt">
+        <em
+          >The
+          <a
+            href="https://commons.wikimedia.org/wiki/Category:Vernagtferner"
+            target="_blank"
+            >illustrations</a
+          >
+          to the right were drawn by Rudolf Reschreiter in 1911, and depict
+          Vernagtferner glacier as a fearsome beast advancing and retreating up
+          the valley. I first found them at this fun Columbia University
+          <a
+            href="https://blogs.ei.columbia.edu/2018/04/02/culture-history-glaciers-alps/"
+            target="_blank"
+            >blog</a
+          >.</em
+        >
+      </p>
+    </div>
+  </div>
+
+  <h2 id="exp">Glacier sliding experiments</h2>
+  <div class="flex">
+    <div class="col2">
+      <img
+        src="../photos/freezerdoor.JPG"
+        style="width: 20vw; margin-bottom: 10px"
+      />
+      <img
+        src="/photos/ringshear.JPG"
+        style="width: 20vw; margin-bottom: 10px"
+      />
+    </div>
+    <div>
+      <p>
+        Using a ring-shear device at Iowa State University, I studied the
+        mechanics of subglacial debris-bed friction. My experiments tested and
+        expanded upon Bernard Hallet's theory (1979, 1981), which states that
+        debris-bed friction is a product of bed-normal ice velocity and is
+        independent of total normal stress applied by the ice. These experiments
+        are the foundation of my master's thesis.
+      </p>
+      <h3>
+        Thesis abstract: An experimental study of debris-bed friction during
+        glacier sliding
+      </h3>
+      <p>
+        Modeling the speeds of sliding glaciers reveals major uncertainty to
+        estimates of sea-level rise and landscape evolution. In sliding models,
+        friction between ice-entrained debris and the bed is often overlooked.
+        For the common case of sparse debris in basal ice, theories developed in
+        the 1970s by G.S. Boulton and B. Hallet included contradictory
+        treatments of the forces that push particles against the bed. Boulton
+        assumed that these forces scale with effective pressure—the difference
+        between ice pressure and water pressure in cavities beneath
+        particles—whereas Hallet assumed these forces depend on the rate of ice
+        convergence toward the bed from melting and bed-parallel stretching of
+        ice on stoss surfaces. The resultant bed-normal drag on particles
+        depends on movement of ice past them by regelation and enhanced creep of
+        ice.
+      </p>
+      <br />
+      <p>
+        To test these contrasting hypotheses, a large ring-shear device was used
+        to slide temperate ice with sparse debris over a smooth rock bed.
+        Isolated gravel-sized till particles in contact with the bed were built
+        into an ice ring (outer diameter = 0.9 m, width = 0.20 m, thickness =
+        0.24 m) that rotated at a steady speed. A fluid, with its temperature
+        controlled to the nearest 0.01oC, surrounded the ice chamber to keep the
+        ice at its pressure-melting temperature. Meltwater drained to
+        atmospheric pressure from the edges of the bed. During experiments,
+        either the ice convergence rate or total bed-normal stress was
+        incremented, and shear stress was measured until a steady value was
+        attained. In separate rate-controlled tests without ice, the dynamic
+        friction coefficient between the particles and the rock bed was
+        measured.
+      </p>
+      <br />
+      <p>
+        Results indicate that friction between particles and the bed depends on
+        convergence rate. In contrast, total normal stress has no effect on bed
+        shear stress, in agreement with Hallet’s model. However, water-filled
+        cavities formed beneath particles rather than the regelation ice
+        expected from Hallet’s model. These observations can be explained by an
+        adjusted model that appeals to mass conservation in melt films that
+        exist everywhere at ice-rock boundaries. While ice converges with the
+        bed, melting at the tops of particles creates pressure gradients and
+        flow within melt films that push particles against the bed. Higher
+        convergence rates generate more melt that steepens pressure gradients.
+        Film thicknesses are sufficient to neglect intermolecular interactions
+        associated with premelting. Finally, by incorporating observed particle
+        rotation, the adjusted model is made consistent with the experimental
+        data and observations.
+      </p>
+      <br />
+      <p>
+        <a
+          href="https://drive.google.com/file/d/1DF4rcGtZIbX7JaN7RMLLwa-d3CjP4xSu/view?usp=sharing"
+          target="_blank"
+          >access full thesis here</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <h3>Related presentations</h3>
+  <p>
+    Thompson, A. C., Iverson, N. R., Zoet, L. K., An experimental study of
+    subglacial debris-bed friction during basal slip. Oral presentation at:
+    American Geophysical Society Meeting; 2019 Dec 13; San Francisco, CA.
+    <a
+      href="https://agu.confex.com/agu/fm19/meetingapp.cgi/Paper/518476"
+      target="_blank"
+      >abstract</a
+    >
+  </p>
+  <br />
+  <p>
+    Thompson, A. C., Iverson, N. R., Zoet, L. K., An experimental study of
+    debris-bed friction during basal slip. Oral presentation at: International
+    Glaciological Society Symposium on Glacial Erosion and Sedimentation; 2019
+    May 12; Madison, WI.
+    <a
+      href="https://www.igsoc.org/symposia/2019/madison/proceedings/fullprogramme.html"
+      target="_blank"
+      >abstract</a
+    >
+  </p>
+  <br />
+
+  <h2 id="fieldwork">
+    Fieldwork at glacier forefields in the Canadian Rockies and Swiss Alps
+  </h2>
+  <div class="flex">
+    <div class="col2">
+      <div class="slideshow-container" style="width: 30vw; height: 22.5vw">
+        <div class="mySlides2 fade">
+          <img src="/photos/Switz1.jpeg" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/Switz2.jpeg" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/tripod.jpeg" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/cows.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/switz.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/drone.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/forefield.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/glacier.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/stuff.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/target.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/uvalley.JPG" style="width: 100%" />
+        </div>
+        <div class="mySlides2 fade">
+          <img src="/photos/castleguard.jpg" style="width: 100%" />
+        </div>
+      </div>
+      <div style="text-align: center; margin-bottom: 10px">
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+      </div>
+      <img src="../photos/fieldequip.JPG" style="width: 30vw" />
+      <p style="font-size: 10pt">
+        <em
+          >Most of these are my photos, but photos of me are from the PolarTREC
+          blogs.</em
+        >
+      </p>
+    </div>
+    <div>
+      <p>
+        I spent two field seasons in 2017 and 2018 on a team surveying glacier
+        forefields (the rock surface in front of a glacier) using LiDAR and
+        Structure-from-Motion. These data were used to create digital elevation
+        models (DEMs) of the rock surface to be statistically analysed and fed
+        into glacier sliding models.
+      </p>
+      <br />
+      <p>
+        Limestone beds at Castleguard forefield, in Banff National Park, created
+        a stepped surface for the ice to slide over. As a result, the ice
+        seperated from the rock as it slid over the steps, creating subglacial
+        water-filled cavities. The ice has since retreated, but there are
+        several physical features on the rock surface that reveal the extent of
+        the cavities.
+      </p>
+      <br />
+      <p>
+        In the field, I measured step geometry, cavity size, and striation
+        orientation to analyze the geometry of subglacial cavities. I compared
+        those geometries to theory () and have been using ArcGIS.10.x. to
+        identifiy spatial patterns.
+      </p>
+
+      <h3>Related presentations</h3>
+      <p>
+        Thompson, A. C., Iverson, N. R., Zoet, L. K., A relationship between
+        sliding speed and effective pressure based on observations of
+        deglaciated bedrock. Poster session presented at: Geological Society of
+        America North-Central Section Meeting; 2018 April 17; Ames, IA.
+        <a
+          href="https://gsa.confex.com/gsa/2018NC/meetingapp.cgi/Paper/312764"
+          target="_blank"
+          >abstract</a
+        ><br /><b>*Awarded best graduate student poster!</b>
+      </p>
+
+      <h3>PolarTREC</h3>
+      <p>
+        A PolarTREC educator, Lauren Adamo, joined us in Switzerland to document
+        our work for the public and to give presentations at schools and
+        libraries.
+      </p>
+      <br />
+      <p>
+        <a href="https://www.polartrec.com/expeditions/sliding-glaciers"
+          >PolarTREC Sliding Glaciers expedition home</a
+        >
+      </p>
+      <br />
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-22"
+          target="_blank"
+          >PolarTREC Journal: Day 8 in the Field 8/22/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-18"
+          target="_blank"
+          >PolarTREC Journal: Day 5 in the Field 8/18/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-17"
+          target="_blank"
+          >PolarTREC Journal: Day 4 in the Field 8/17/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-16"
+          target="_blank"
+          >PolarTREC Journal: What is a glacial forefield? 8/16/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-15"
+          target="_blank"
+          >PolarTREC Journal: Day 3 of Field Work 8/15/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-14"
+          target="_blank"
+          >PolarTREC Journal: Signs of Glacial Erosion 8/14/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-08-13"
+          target="_blank"
+          >PolarTREC Journal: Day 1 of Field Work 8/13/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-06-27"
+          target="_blank"
+          >PolarTREC Journal: Drone Test Flight 6/27/18</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://www.polartrec.com/expeditions/sliding-glaciers/journals/2018-06-20"
+          target="_blank"
+          >PolarTREC Journal: Drone Mapping 101 6/20/18</a
+        >
+      </p>
+      <br />
+    </div>
+  </div>
+
+  <h2 id="fieldtrip">Fieldtrip in Switzerland</h2>
+  <div class="flex">
+    <div class="col2">
+      <div class="slideshow-container" style="width: 30vw; height: 22.5vw">
+        <div class="mySlides3 fade">
+          <img src="/photos/Glacierday2.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides3 fade">
+          <img src="/photos/glacierday3.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides3 fade">
+          <img src="/photos/glacierday4.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides3 fade">
+          <img src="/photos/glacierday5.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides3 fade">
+          <img src="/photos/glacierday6.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides3 fade">
+          <img src="/photos/glacierday7.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides3 fade">
+          <img src="/photos/glacierday8.jpg" style="width: 100%" />
+        </div>
+      </div>
+      <div style="text-align: center; margin-bottom: 10px">
+        <span class="dot3"></span>
+        <span class="dot3"></span>
+        <span class="dot3"></span>
+        <span class="dot3"></span>
+        <span class="dot3"></span>
+        <span class="dot3"></span>
+        <span class="dot3"></span>
+      </div>
+    </div>
+    <div>
+      <p>
+        I visited the Swiss Alps in August 2018 with an ISU class taught by
+        Jacqueline Reber to learn more about their formation and to see some of
+        the evidence in person. Though I had to miss a good portion of the
+        fieldtrip to do the fieldwork described above, I was able to observe
+        evidence of large-scale compression, subduction, and glacially carved
+        landscapes at Gemmipass and the Findelgletcher Valley above Zermatt.
+      </p>
+      <br />
+      <p>
+        At Findelgletcher Valley, I led a day of the fieldtrip devoted to an
+        introduction to glaciers. We talked about mass balance while looking
+        down on the glacier, glacial landscapes while looking at the matterhorn
+        and surrounding peaks and valleys, deposition while walking down the
+        moraine, erosional features while standing on the rock in front of the
+        ice, and drainage while standing by the outlet at the ice margin.
+      </p>
+      <br />
+      <p>
+        It was a fun challenge to plan a fieldtrip to a place I had never seen
+        from accross an ocean, but it was a successful day, and I discovered the
+        amazing website
+        <a
+          href="https://map.geo.admin.ch/?lang=en&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege&layers_opacity=1,1,1,0.8&layers_visibility=false,false,false,false&layers_timestamp=18641231,,,"
+          >Swiss Topo</a
+        >
+        in the meantime!
+      </p>
+    </div>
+  </div>
+  <p><img src="/photos/Glacierday.jpg" style="width: 100%" /></p>
+  <p style="font-size: 10pt">
+    <em
+      >Map of a full day fieldtrip at Findelgletcher above Zermatt, Switzerland.
+      Created using Swiss Topo.</em
+    >
+  </p>
+</div>
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  var slideIndex2 = 0;
+  showSlides2();
+
+  function showSlides2() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides2");
+    var dots = document.getElementsByClassName("dot2");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex2++;
+    if (slideIndex2 > slides.length) {
+      slideIndex2 = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].className += " active";
+    setTimeout(showSlides2, 2000); // Change image every 2 seconds
+  }
+
+  var slideIndex3 = 0;
+  showSlides3();
+
+  function showSlides3() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides3");
+    var dots = document.getElementsByClassName("dot3");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides.length) {
+      slideIndex3 = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex3 - 1].style.display = "block";
+    dots[slideIndex3 - 1].className += " active";
+    setTimeout(showSlides3, 2000); // Change image every 2 seconds
+  }
+</script>
+{% endblock %}
