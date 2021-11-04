@@ -1,4 +1,4 @@
-{% extends "_base.html.jinja" %} {% block more_scripts %}
+{% extends "_base.html.jinja" %}{% block more_scripts %}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" /> 
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <!––load external geojson-->
@@ -32,8 +32,8 @@
         color: #777;
     }
     </style>   <!--legend--> 
-{% endblock %}
-{%block content %}
+{% endblock %} {% block backgroundimg %}'../photos/flockhill3.jpg'{% endblock%} {%block content %}
+
     <div class="whitebox">
             <h1>Fieldwork</h1>
             <p style="margin-left: 0px;"><a href="/Research/MSThesis.html#fieldwork">Glacier forefields</a>, <a href="/Research/keck.html">Glaciovolcanics in Iceland</a>, <a href="/FieldWork/nz.html">New Zealand field school</a>, <a href="/FieldWork/ca.html">San Andreas mapping</a>, <a href="/FieldWork/streams.html">Stream and wetland restoration projects</a><br><br>
